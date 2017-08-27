@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js windows">
+<head>
+
+    <meta charset="UTF-8"/>
+
+    <link rel='stylesheet' id='style-main-css'
+          href='https://koenig-assets.raywenderlich.com/wp-content/themes/raywenderlich/style.min.css?ver=1493454929'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='highlight.js-css'
+          href='https://koenig-assets.raywenderlich.com/wp-content/themes/raywenderlich/styles/highlight.js.atom-one-light.min.css?ver=9.11.0'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='swiftype-css'
+          href='https://koenig-assets.raywenderlich.com/wp-content/plugins/swiftype-search/assets/autocomplete.css?ver=4.7.4'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='wp-pagenavi-css'
+          href='https://koenig-assets.raywenderlich.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70'
+          type='text/css' media='all'/>
+
+    <style type="text/css">
+        /* <![CDATA[ */
+        img.latex {
+            vertical-align: middle;
+            border: none;
+        }
+        /* ]]> */
+    </style>
+
+    <style>.single article.post img {
+        max-width: 100%;
+    }</style>
+</head>
+<body class="post-template-default single single-post postid-143771 single-format-standard">
+
+<div id="main" class="wrapper clearfix">
+    <div id="container">
+        <div id="primary" >
+            <div id="primary-container">
+                <div class="banner-ad" syle="overflow:hidden">
+                    <!-- BuySellAds.com Ad Code -->
+                    <div id="bsap_1272017" class="bsarocks bsap_39fcef7ed4520883d78f129c33995fd2"></div>
+                    <!-- End BuySellAds.com Ad Code -->
+                </div>
+                <div id="content">
+                    <article id="post-143771"
+                             class="clearfix post-143771 post type-post status-publish format-standard has-post-thumbnail hentry category-alternative-beginners tag-tutorial">
+
+                        <div class="content-wrapper">
+                            <div id="attachment_143788" style="width: 260px" class="wp-caption alignright"><img
+                                src="https://koenig-media.raywenderlich.com/uploads/2016/09/swifty-1-1.png"
+                                alt="Learn how to code using Swift 3 and playgrounds!" width="250" height="250"
+                                class="size-full wp-image-143788"
+                                srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/swifty-1-1.png 250w, https://koenig-media.raywenderlich.com/uploads/2016/09/swifty-1-1-32x32.png 32w, https://koenig-media.raywenderlich.com/uploads/2016/09/swifty-1-1-50x50.png 50w, https://koenig-media.raywenderlich.com/uploads/2016/09/swifty-1-1-64x64.png 64w, https://koenig-media.raywenderlich.com/uploads/2016/09/swifty-1-1-96x96.png 96w, https://koenig-media.raywenderlich.com/uploads/2016/09/swifty-1-1-128x128.png 128w"
+                                sizes="(max-width: 250px) 100vw, 250px"/>
+                                <p class="wp-caption-text">Learn how to code using Swift 3 and playgrounds!</p></div>
+                            <p>Welcome to our mini series on getting started with programming in Swift!</p>
+                            <p>In this series, you&#8217;ll learn some of the basics of programming while working in a
+                                modern, friendly environment with the Swift programming language.</p>
+                            <p>Instead of boring you with a lot of theory, we&#8217;re going to get you coding right
+                                away by using Xcode <em>playgrounds</em>, which are sandbox-type environments where you
+                                can run code directly without having to code an entire app.</p>
+                            <p>For this tutorial, you&#8217;ll need <em>Xcode 8</em>, the standard development
+                                environment for macOS, <a href="https://developer.apple.com/xcode/">available here</a>.
+                                If you have Xcode version 7 or below, some of the code in this tutorial won&#8217;t work
+                                as expected.</p>
+                            <h2>Getting Started</h2>
+                            <p>The set of tools you use to write software is often referred to as the <em>toolchain</em>.
+                                The part of the toolchain into which you write your code is known as the <em>Integrated
+                                    Development Environment</em> (<em>IDE</em>). Xcode is your IDE, which includes
+                                playgrounds.</p>
+                            <p>You’ll use playgrounds throughout this series to practice coding, so it’s important to
+                                understand how they work. That’s what you’ll learn during the rest of this tutorial.</p>
+                            <h2>Creating a Playground</h2>
+                            <p>When you open Xcode, it will greet you with the following welcome screen:</p>
+                            <p><img
+                                src="https://koenig-media.raywenderlich.com/uploads/2016/09/welcome_to_xcode-650x381.png"
+                                alt="welcome_to_xcode" width="650" height="381"
+                                class="aligncenter size-large wp-image-143774"
+                                srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/welcome_to_xcode-650x381.png 650w, https://koenig-media.raywenderlich.com/uploads/2016/09/welcome_to_xcode-480x282.png 480w"
+                                sizes="(max-width: 650px) 100vw, 650px"/></p>
+                            <p>If you don’t see this screen, it’s most likely because the “Show this window when Xcode
+                                launches” option was unchecked. You can also open the screen by pressing <em>Command-Shift-1</em>
+                                or clicking <em>Window</em><em>\</em><em>Welcome to Xcode</em> from the menu bar.</p>
+                            <p>From the welcome screen, you can jump quickly into a playground by clicking on <em>Get
+                                started with a playground</em>. Click on that now and Xcode will take you to a new
+                                screen:</p>
+                            <p><img
+                                src="https://koenig-media.raywenderlich.com/uploads/2016/09/new_playground-650x416.png"
+                                alt="new_playground" width="650" height="416"
+                                class="aligncenter size-large wp-image-143775"
+                                srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/new_playground-650x416.png 650w, https://koenig-media.raywenderlich.com/uploads/2016/09/new_playground-480x308.png 480w, https://koenig-media.raywenderlich.com/uploads/2016/09/new_playground.png 960w"
+                                sizes="(max-width: 650px) 100vw, 650px"/></p>
+                            <p>From here, you can name the playground and select your desired platform. The name is
+                                merely cosmetic and for your own use; when you create your playgrounds, feel free to
+                                choose names that will help you remember what they’re about.</p>
+                            <p>The second option you can see here is the platform. Currently, this can be either
+                                <em>iOS</em>, <em>macOS</em> or <em>tvOS</em>.</p>
+                            <p>The platform you choose simply defines which template Xcode will use to create the
+                                playground. Each platform comes with its own environment set up and ready for you to
+                                begin playing around with code. For the purposes of this seris, choose whichever you
+                                wish. You won’t be writing any platform-specific code; instead, you’ll be learning the
+                                core principles of the Swift language.</p>
+                            <p>Once you’ve chosen a name and a platform, click on <em>Next</em> and then save the
+                                playground. Xcode then presents you with the playground, like so:</p>
+                            <p><img
+                                src="https://koenig-media.raywenderlich.com/uploads/2016/09/empty_playground-650x356.png"
+                                alt="empty_playground" width="650" height="356"
+                                class="aligncenter size-large wp-image-143776"
+                                srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/empty_playground-650x356.png 650w, https://koenig-media.raywenderlich.com/uploads/2016/09/empty_playground-480x263.png 480w, https://koenig-media.raywenderlich.com/uploads/2016/09/empty_playground.png 960w"
+                                sizes="(max-width: 650px) 100vw, 650px"/></p>
+                            <p>New playgrounds don’t start entirely empty but have some basic starter code to get you
+                                going. Don’t worry — you’ll soon learn what this code means.</p>
+                            <h3>Playgrounds Overview</h3>
+                            <p>At first glance, a playground may look like a rather fancy text editor. Well, here’s some
+                                news for you: It is essentially just that!</p>
+                            <p><img
+                                src="https://koenig-media.raywenderlich.com/uploads/2016/09/playground_features-650x419.png"
+                                alt="playground_features" width="650" height="419"
+                                class="aligncenter size-large wp-image-143779"
+                                srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/playground_features-650x419.png 650w, https://koenig-media.raywenderlich.com/uploads/2016/09/playground_features-480x310.png 480w"
+                                sizes="(max-width: 650px) 100vw, 650px"/></p>
+                            <p>The above screenshot highlights the first and most important things to know about:</p>
+                            <ol start="1">
+                                <li>
+                                    <em>Source editor</em>: This is the area in which you’ll write your Swift code. It’s
+                                    much like a text editor such as Notepad or TextEdit. You’ll notice the use of what’s
+                                    known as a monospace font, meaning all characters are the same width. This makes the
+                                    code much easier to read and format.
+                                </li>
+                                <li>
+                                    <em>Results sidebar</em>: This area shows the results of your code. You’ll learn
+                                    more about how code is executed as you read through the series. The results sidebar
+                                    will be the main place you’ll look to confirm your code is working as expected.
+                                </li>
+                                <li>
+                                    <em>Execution control</em>: Playgrounds execute automatically by default, meaning
+                                    you can write code and immediately see the output. This control allows you to
+                                    execute the playground again. Holding down the button allows you to switch between
+                                    automatic execution and manual execution modes.
+                                </li>
+                                <li>
+                                    <em>Activity viewer</em>: This shows the status of the playground. In the
+                                    screenshot, it shows that the playground has finished executing and is ready to
+                                    handle more code in the source editor. When the playground is executing, this viewer
+                                    will indicate this with a spinner.
+                                </li>
+                                <li>
+                                    <em>Panel controls</em>: These toggle switches show and hide three panels, one that
+                                    appears on the left, one on the bottom and one on the right. The panels each display
+                                    extra information that you may need to access from time to time. You’ll usually keep
+                                    them hidden, as they are in the screenshot. You’ll learn more about each of these
+                                    panels as you move through the series.
+                                </li>
+                            </ol>
+                            <p>Playgrounds execute the code in the source editor from top to bottom. Every time you
+                                change the code, the playground will re-execute everything. You can also force a
+                                re-execution by clicking <em>Editor</em><em>\</em><em>Execute Playground</em>.
+                                Alternatively, you can use the execution control.</p>
+                            <p>You can turn on line numbers on the left side of the source editor by clicking
+                                <em>Xcode</em><em>\</em><em>Preferences&#8230;</em><em>\</em><em>Text
+                                    Editing</em><em>\</em><em>Line Numbers</em>. Line numbers can be very useful when
+                                you want to refer to parts of your code.</p>
+                            <p>Once the playground execution is finished, Xcode updates the results sidebar to show the
+                                results of the corresponding line in the source editor. You’ll see how to interpret the
+                                results of your code as you work through the examples in this series.</p>
+                            <p>Code comments, arithmetic operations, constants and variables are some of the fundamental
+                                building blocks of any language, and Swift is no different.</p>
+                            <h2>Code Comments</h2>
+                            <p>The Swift compiler generates executable code from your source code. To accomplish this,
+                                it uses a detailed set of rules. Sometimes these details can obscure the big picture of
+                                <em>why</em> you wrote your code a certain way or even what problem you are solving. To
+                                prevent this, it’s good to document what you wrote so that the next human who passes by
+                                will be able to make sense of your work. That next human, after all, may be a future
+                                you! :]</p>
+                            <p>Swift, like most other programming languages, allows you to document your code through
+                                the use of what are called <em>comments</em>. These allow you to write any text directly
+                                along side your code, which is ignored by the compiler.</p>
+                            <p>The first way to write a comment is like so:</p>
+                            <pre lang="swift">
+// This is a comment. It is not executed.
+</pre>
+                            <p>This is a <em>single line comment</em>. You could stack these up like so to allow you to
+                                write paragraphs:</p>
+                            <pre lang="swift">
+// This is also a comment.
+// Over multiple lines.
+</pre>
+                            <p>However, there is a better way to write comments which span multiple lines. Like so:</p>
+                            <pre lang="swift">
+/* This is also a comment.
+   Over many..
+   many...
+   many lines. */
+</pre>
+                            <p>This is a <em>multi-line comment</em>. The start is denoted by <code>/*</code> and the
+                                end is denoted by <code>*/</code>. Simple!</p>
+                            <p>You should use code comments where necessary to document your code, explain your
+                                reasoning, or simply to leave jokes for your colleagues. :]</p>
+                            <h2>Printing Out</h2>
+                            <p>It’s also useful to see the results of what your code is doing. In Swift, you can achieve
+                                this through the use of the <code>print</code> command.</p>
+                            <p><code>print</code> will output whatever you want to the <em>debug area</em> (sometimes
+                                referred to as the console).</p>
+                            <p>For example, consider the following code:</p>
+                            <pre lang="swift">
+print(&quot;Hello, Swift Apprentice reader!&quot;)
+</pre>
+                            <p>This will output a nice message to the debug area, like so:</p>
+                            <p><img src="https://koenig-media.raywenderlich.com/uploads/2016/09/printing-650x304.png"
+                                    alt="printing" width="650" height="304"
+                                    class="aligncenter size-large wp-image-143780"
+                                    srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/printing-650x304.png 650w, https://koenig-media.raywenderlich.com/uploads/2016/09/printing-480x225.png 480w"
+                                    sizes="(max-width: 650px) 100vw, 650px"/></p>
+                            <p>You can hide or show the debug area using the button highlighted with the red box in the
+                                picture above. You can also click <em>View</em><em>\</em><em>Debug
+                                    Area</em><em>\</em><em>Show Debug Area</em> to do the same thing.</p>
+                            <h2>Arithmetic Operations</h2>
+                            <p>When you take one or more pieces of data and turn them into another piece of data, this
+                                is known as an <em>operation</em>.</p>
+                            <p>The simplest way to understand operations is to think about arithmetic. The addition
+                                operation takes two numbers and converts them into the sum of the two numbers. The
+                                subtraction operation takes two numbers and converts them into the difference of the two
+                                numbers.</p>
+                            <p>You’ll find simple arithmetic all over your apps; from tallying the number of “likes” on
+                                a post, to calculating the correct size and position of a button or a window, numbers
+                                are indeed everywhere!</p>
+                            <p>In this section, you’ll learn about the various arithmetic operations that Swift has to
+                                offer by considering how they apply to numbers. In later parts, you see operations for
+                                types other than numbers.</p>
+                            <h3>Simple Operations</h3>
+                            <p>All operations in Swift use a symbol known as the <em>operator</em> to denote the type of
+                                operation they perform.</p>
+                            <p>Consider the four arithmetic operations you learned in your early school days: addition,
+                                subtraction, multiplication and division. For these simple operations, Swift uses the
+                                following operators:</p>
+                            <ul>
+                                <li>
+                                    Add: <code>+</code>
+                                </li>
+                                <li>
+                                    Subtract: <code>-</code>
+                                </li>
+                                <li>
+                                    Multiply: <code>*</code>
+                                </li>
+                                <li>
+                                    Divide: <code>/</code>
+                                </li>
+                            </ul>
+                            <p>These operators are used like so:</p>
+                            <pre lang="swift">
+2 + 6
+
+10 - 2
+
+2 * 4
+
+24 / 3
+</pre>
+                            <p>Each of these lines is what is known as an <em>expression</em>. An expression has a
+                                value. In these cases, all four expressions have the same value: 8. You write the code
+                                to perform these arithmetic operations much as you would write it if you were using pen
+                                and paper.</p>
+                            <p><img src="https://koenig-media.raywenderlich.com/uploads/2016/09/broken_paper.png"
+                                    alt="broken_paper" width="612" height="294"
+                                    class="aligncenter size-full wp-image-143781"
+                                    srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/broken_paper.png 612w, https://koenig-media.raywenderlich.com/uploads/2016/09/broken_paper-480x231.png 480w"
+                                    sizes="(max-width: 612px) 100vw, 612px"/></p>
+                            <p>In your playground, you can see the values of these expressions in the right-hand bar,
+                                known as the <em>results sidebar</em>, like so:</p>
+                            <p><img
+                                src="https://koenig-media.raywenderlich.com/uploads/2016/09/arithmetic_operations-650x304.png"
+                                alt="arithmetic_operations" width="650" height="304"
+                                class="aligncenter size-large wp-image-143782"
+                                srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/arithmetic_operations-650x304.png 650w, https://koenig-media.raywenderlich.com/uploads/2016/09/arithmetic_operations-480x225.png 480w"
+                                sizes="(max-width: 650px) 100vw, 650px"/></p>
+                            <p>If you want, you can remove the white space surrounding the operator:</p>
+                            <pre lang="swift">
+2+6
+</pre>
+                            <p>Removing the whitespace is an all or nothing thing: you can&#8217;t mix styles. For
+                                example:</p>
+                            <pre lang="swift">
+2+6   // OK
+2 + 6 // OK
+2 +6  // ERROR
+2+ 6  // ERROR
+</pre>
+                            <p>It’s often easier to read expressions if you have white space on either side of the
+                                operator.</p>
+                            <h3>Decimal Numbers</h3>
+                            <p>All of the operations above have used whole numbers, more formally known as
+                                <em>integers</em>. However, as you will know, not every number is whole.</p>
+                            <p>As an example, consider the following:</p>
+                            <pre lang="swift">
+22 / 7
+</pre>
+                            <p>This, you may be surprised to know, results in the number 3. This is because if you only
+                                use integers in your expression, Swift makes the result an integer also. In this case,
+                                the result is rounded down to the next integer.</p>
+                            <p>You can tell Swift to use decimal numbers by changing it to the following:</p>
+                            <pre lang="swift">
+22.0 / 7.0
+</pre>
+                            <p>This time, the result is 3.142857142857143 as expected.</p>
+                            <h3>The Remainder Operation</h3>
+                            <p>The four operations you’ve seen so far are easy to understand because you’ve been doing
+                                them for most of your life. Swift also has more complex operations you can use, all of
+                                them standard mathematical operations, just less common ones. Let’s turn to them
+                                now.</p>
+                            <p>The first of these is the <em>remainder</em> operation, also called the modulo operation.
+                                In division, the denominator goes into the numerator a whole number of times, plus a
+                                remainder. This remainder is exactly what the remainder operation gives. For example, 10
+                                modulo 3 equals 1, because 3 goes into 10 three times, with a remainder of 1.</p>
+                            <p>In Swift, the remainder operator is the <code>%</code> symbol, and you use it like so:
+                            </p>
+                            <pre lang="swift">
+28 % 10
+</pre>
+                            <p>In this case, the result equals <code>8</code>, because 10 goes into 28 twice with a
+                                remainder of 8.</p>
+                            <h3>Shift Operations</h3>
+                            <p>The <em>shift left</em> and <em>shift right</em> operations take the binary form of a
+                                decimal number and shift the digits left or right, respectively. Then they return the
+                                decimal form of the new binary number.</p>
+                            <p>For example, the decimal number 14 in binary, padded to 8 digits, is
+                                <code>00001110</code>. Shifting this left by two places results in <code>00111000</code>,
+                                which is 56 in decimal.</p>
+                            <p>Here’s an illustration of what happens during this shift operation:</p>
+                            <p><img src="https://koenig-media.raywenderlich.com/uploads/2016/09/shift_left-650x338.png"
+                                    alt="shift_left" width="650" height="338"
+                                    class="aligncenter size-large wp-image-143783"
+                                    srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/shift_left-650x338.png 650w, https://koenig-media.raywenderlich.com/uploads/2016/09/shift_left-480x250.png 480w, https://koenig-media.raywenderlich.com/uploads/2016/09/shift_left.png 969w"
+                                    sizes="(max-width: 650px) 100vw, 650px"/></p>
+                            <p>The digits that come in to fill the empty spots on the right become <code>0</code>. The
+                                digits that fall off the end on the left are lost.</p>
+                            <p>Shifting right is the same, but the digits move to the right.</p>
+                            <p>The operators for these two operations are as follows:</p>
+                            <ul>
+                                <li>
+                                    Shift left: <code><<</code>
+                                </li>
+                                <li>
+                                    Shift right: <code>>></code>
+                                </li>
+                            </ul>
+                            <p>These are the first operators you’ve seen that contain more than one character. Operators
+                                can contain any number of characters, in fact.</p>
+                            <p>Here’s an example that uses both of these operators:</p>
+                            <pre lang="swift">
+1 &lt;&lt; 3
+
+32 &gt;&gt; 2
+</pre>
+                            <p>Both of these values equal the number 8.</p>
+                            <p>One reason for using shifts is to make multiplying or dividing by powers of two easy.
+                                Notice that shifting left by one is the same as multiplying by two, shifting left by two
+                                is the same as multiplying by four, and so on. Likewise, shifting right by one is the
+                                same as dividing by two, shifting right by two is the same as dividing by four, and so
+                                on.</p>
+                            <p>In the old days, code often made use of this trick because shifting bits is much simpler
+                                for a CPU to do than complex multiplication and division arithmetic. Therefore the code
+                                was quicker if it used shifting. However these days, CPUs are much faster and compilers
+                                can even convert multiplication and division by powers of two into shifts for you. So
+                                you’ll see shifting only for binary twiddling, which you probably won’t see unless you
+                                become an embedded systems programmer!</p>
+                            <h3>Order of Operations</h3>
+                            <p>Of course, it’s likely that when you calculate a value, you’ll want to use multiple
+                                operators. Here’s an example of how to do this in Swift:</p>
+                            <pre lang="swift">
+((8000 / (5 * 10)) - 32) &gt;&gt; (29 % 5)
+</pre>
+                            <p>Notice the use of parentheses, which in Swift serve two purposes: to make it clear to
+                                anyone reading the code — including yourself — what you meant, and to disambiguate. For
+                                example, consider the following:</p>
+                            <pre lang="swift">
+350 / 5 + 2
+</pre>
+                            <p>Does this equal 72 (350 divided by 5, plus 2) or 50 (350 divided by 7)? Those of you who
+                                paid attention in school will be screaming “72!” And you would be right!</p>
+                            <p>Swift uses the same reasoning and achieves this through what’s known as <em>operator
+                                precedence</em>. The division operator (<code>/</code>) has a higher precedence than the
+                                addition operator (<code>+</code>), so in this example, the code executes the division
+                                operation first.</p>
+                            <p>If you wanted Swift to do the addition first — that is, to return 50 — then you could use
+                                parentheses like so:</p>
+                            <pre lang="swift">
+350 / (5 + 2)
+</pre>
+                            <p>The precedence rules follow the same that you learned in math at school. Multiply and
+                                divide have the same precedence, higher than add and subtract which also have the same
+                                precedence.</p>
+                            <h2>Math functions</h2>
+                            <p>Swift also has a vast range of math functions for you to use when necessary. You never
+                                know when you need to pull out some trigonometry, especially when you’re a pro Swift-er
+                                and writing those complex games!</p>
+                            <div class="note">
+                                <em>Note:</em> Not all of these functions are part of Swift. Some are provided by the
+                                operating system. Don’t remove the import statement that comes as part of the playground
+                                template or Xcode will tell you it can’t find these functions.
+                            </div>
+                            <p>For example, consider the following:</p>
+                            <pre lang="swift">
+sin(45 * Double.pi / 180)
+// 0.7071067811865475
+
+cos(135 * Double.pi / 180)
+// -0.7071067811865475
+</pre>
+                            <p>These compute the sine and cosine respectively. Notice how both make use of <code>Double.pi</code>
+                                which is a constant Swift provides us, ready-made with pi to as much precision as is
+                                possible by the computer. Neat!</p>
+                            <p>Then there’s this:</p>
+                            <pre lang="swift">
+sqrt(2.0)
+// 1.414213562373095
+</pre>
+                            <p>This computes the square root of 2. Did you know that sin(45°) equals 1 over the square
+                                root of 2?</p>
+                            <div class="note">
+                                <em>Note:</em> Notice how you used <code>2.0</code> instead of <code>2</code> in the
+                                example above? Functions that are provided by the operating systems (like
+                                <code>sqrt</code>, <code>sin</code> and <code>cos</code>) are picky and accept only
+                                numbers that contain a decimal point.
+                            </div>
+                            <p>Not to mention these would be a shame:</p>
+                            <pre lang="swift">
+max(5, 10)
+// 10
+
+min(-5, -10)
+// -10
+</pre>
+                            <p>These compute the maximum and minimum of two numbers respectively.</p>
+                            <p>If you’re particularly adventurous you can even combine these functions like so:</p>
+                            <pre lang="swift">
+max(sqrt(2.0), Double.pi / 2)
+// 1.570796326794897
+</pre>
+                            <h2>Naming Data</h2>
+                            <p>At its simplest, computer programming is all about manipulating data. Remember,
+                                everything you see on your screen can be reduced to numbers that you send to the CPU.
+                                Sometimes you yourself represent and work with this data as various types of numbers,
+                                but other times the data comes in more complex forms such as text, images and
+                                collections.</p>
+                            <p>In your Swift code, you can give each piece of data a name you can use to refer to it
+                                later. The name carries with it an associated <em>type</em> that denotes what sort of
+                                data the name refers to, such as text, numbers, or a date.</p>
+                            <p>You’ll learn about some of the basic types in this part, and you’ll encounter many other
+                                types throughout the rest of this series.</p>
+                            <h3>Constants</h3>
+                            <p>Take a look at this:</p>
+                            <pre lang="swift">
+let number: Int = 10
+</pre>
+                            <p>This declares a constant called <code>number</code> which is of type <code>Int</code>.
+                                Then it sets the value of the constant to the number <code>10</code>.</p>
+                            <div class="note">
+                                <em>Note:</em> Thinking back to operators, here’s another one. The equals sign,
+                                <code>=</code>, is known as the <em>assignment operator</em>.
+                            </div>
+                            <p>The type <code>Int</code> can store integers. The way you store decimal numbers is like
+                                so:</p>
+                            <pre lang="swift">
+let pi: Double = 3.14159
+</pre>
+                            <p>This is similar to the <code>Int</code> constant, except the name and the type are
+                                different. This time, the constant is a <code>Double</code>, a type that can store
+                                decimals with high precision.</p>
+                            <p>There’s also a type called <code>Float</code>, short for floating point, that stores
+                                decimals with lower precision than <code>Double</code>. In fact, <code>Double</code> has
+                                about double the precision of <code>Float</code>, which is why it’s called
+                                <code>Double</code> in the first place. A <code>Float</code> takes up less memory than a
+                                <code>Double</code> but generally, memory use for numbers isn’t a huge issue and you’ll
+                                see <code>Double</code> used in most places.</p>
+                            <p>Once you’ve declared a constant, you can’t change its data. For example, consider the
+                                following code:</p>
+                            <pre lang="swift">
+let number: Int = 10
+number = 0
+</pre>
+                            <p>This code produces an error:</p>
+                            <div class="note">
+                                <code>Cannot assign to value: 'number' is a 'let' constant</code>
+                            </div>
+                            <p>In Xcode, you would see the error represented this way:</p>
+                            <p><img
+                                src="https://koenig-media.raywenderlich.com/uploads/2016/09/constant_reassign_error-650x40.png"
+                                alt="constant_reassign_error" width="650" height="40"
+                                class="aligncenter size-large wp-image-143784"
+                                srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/constant_reassign_error-650x40.png 650w, https://koenig-media.raywenderlich.com/uploads/2016/09/constant_reassign_error-480x30.png 480w, https://koenig-media.raywenderlich.com/uploads/2016/09/constant_reassign_error.png 965w"
+                                sizes="(max-width: 650px) 100vw, 650px"/></p>
+                            <p>Constants are useful for values that aren’t going to change. For example, if you were
+                                modeling an airplane and needed to keep track of the total number of seats available,
+                                you could use a constant.</p>
+                            <p>You might even use a constant for something like a person’s age. Even though their age
+                                will change as their birthday comes, you might only be concerned with their age at this
+                                particular instant.</p>
+                            <h3>Variables</h3>
+                            <p>Often you want to change the data behind a name. For example, if you were keeping track
+                                of your bank account balance with deposits and withdrawals, you might use a variable
+                                rather than a constant.</p>
+                            <p>If your program’s data never changed, then it would be a rather boring program! But as
+                                you’ve seen, it’s not possible to change the data behind a constant.</p>
+                            <p>When you know you’ll need to change some data, you should use a variable to represent
+                                that data instead of a constant. You declare a variable in a similar way, like so:</p>
+                            <pre lang="swift">
+var variableNumber: Int = 42
+</pre>
+                            <p>Only the first part of the statement is different: You declare constants using
+                                <code>let</code>, whereas you declare variables using <code>var</code>.</p>
+                            <p>Once you’ve declared a variable, you’re free to change it to whatever you wish, as long
+                                as the type remains the same. For example, to change the variable declared above, you
+                                could do this:</p>
+                            <pre lang="swift">
+var variableNumber: Int = 42
+variableNumber = 0
+variableNumber = 1_000_000
+</pre>
+                            <p>To change a variable, you simply assign it a new value.</p>
+                            <div class="note">
+                                <em>Note:</em> In Swift, you can optionally use underscores to make larger numbers more
+                                human-readable. The quantity and placement of the underscores is up to you.
+                            </div>
+                            <p>This is a good time to take a closer look at the results sidebar of the playground. When
+                                you type the code above into a playground, you’ll see that the results sidebar on the
+                                right shows the current value of <code>variableNumber</code> at each line:</p>
+                            <p><img
+                                src="https://koenig-media.raywenderlich.com/uploads/2016/09/variables_results_sidebar-650x76.png"
+                                alt="variables_results_sidebar" width="650" height="76"
+                                class="aligncenter size-large wp-image-143785"
+                                srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/variables_results_sidebar-650x76.png 650w, https://koenig-media.raywenderlich.com/uploads/2016/09/variables_results_sidebar-480x56.png 480w, https://koenig-media.raywenderlich.com/uploads/2016/09/variables_results_sidebar.png 757w"
+                                sizes="(max-width: 650px) 100vw, 650px"/></p>
+                            <p>The results sidebar will show a relevant result for each line if one exists. In the case
+                                of a variable or constant, the result will be the new value, whether you’ve just
+                                declared a constant, or declared or reassigned a variable.</p>
+                            <h3>Using Meaningful Names</h3>
+                            <p>Always try to choose meaningful names for your variables and constants. Good names can
+                                acts as documentation and make your code easy to read.</p>
+                            <p>A good name <i>specifically</i> describes what the variable or constant represents. Here
+                                are some examples of good names:</p>
+                            <ul>
+                                <li>
+                                    <code>personAge</code>
+                                </li>
+                                <li>
+                                    <code>numberOfPeople</code>
+                                </li>
+                                <li>
+                                    <code>gradePointAverage</code>
+                                </li>
+                            </ul>
+                            <p>Often a bad name is simply not descriptive enough. Here are some examples of bad
+                                names:</p>
+                            <ul>
+                                <li>
+                                    <code>a</code>
+                                </li>
+                                <li>
+                                    <code>temp</code>
+                                </li>
+                                <li>
+                                    <code>average</code>
+                                </li>
+                            </ul>
+                            <p>The key is to ensure that you’ll understand what the variable or constant refers to when
+                                you read it again later. Don’t make the mistake of thinking you have an infallible
+                                memory! It’s common in computer programming to look back at your own code as early as a
+                                day or two later and have forgotten what it does. Make it easier for yourself by giving
+                                your variables and constants intuitive, precise names.</p>
+                            <p>Also, note how the names above are written. In Swift, it is common to <em>camel case</em>
+                                names. For variables and constants, follow these rules to properly case your names:</p>
+                            <ul>
+                                <li>
+                                    Start with a lowercase letter.
+                                </li>
+                                <li>
+                                    If the name is made up of multiple words, join them together and start every other
+                                    word with an uppercase letter.
+                                </li>
+                                <li>
+                                    If one of these words is an abbreviation, write the entire abbreviation in the same
+                                    case (e.g.: <code>sourceURL</code> and <code>urlDescription</code>)
+                                </li>
+                            </ul>
+                            <p>In Swift, you can even use the full range of Unicode characters. For example, you could
+                                declare a variable like so:</p>
+                            <pre lang="swift">
+var : Int = -1
+</pre>
+                            <p>That might make you laugh, but use caution with special characters like these. They are
+                                harder to type and therefore may end up causing you more pain than amusement.</p>
+                            <p><img src="https://koenig-media.raywenderlich.com/uploads/2016/09/bad_choice-650x241.png"
+                                    alt="bad_choice" width="650" height="241"
+                                    class="aligncenter size-large wp-image-143786"
+                                    srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/bad_choice-650x241.png 650w, https://koenig-media.raywenderlich.com/uploads/2016/09/bad_choice-480x178.png 480w, https://koenig-media.raywenderlich.com/uploads/2016/09/bad_choice.png 651w"
+                                    sizes="(max-width: 650px) 100vw, 650px"/></p>
+                            <p>Special characters like these probably make more sense in <i>data</i> that you store
+                                rather than in Swift code.</p>
+                            <h2>Increment and Decrement</h2>
+                            <p>A common operation that you will need is to be able to increment or decrement a variable.
+                                In Swift, this is achieved like so:</p>
+                            <pre lang="swift">
+var counter: Int = 0
+
+counter += 1
+// counter = 1
+
+counter -= 1
+// counter = 0
+</pre>
+                            <p>The <code>counter</code> variable begins as <code>0</code>. The increment sets its value
+                                to <code>1</code>, and then the decrement sets its value back to <code>0</code>.</p>
+                            <p>These operators are similar to the assignment operator (<code>=</code>), except they also
+                                perform an addition or subtraction. They take the current value of the variable, add or
+                                subtract the given value and assign the result to the variable.</p>
+                            <p>In other words, the code above is shorthand for the following:</p>
+                            <pre lang="swift">
+var counter: Int = 0
+counter = counter + 1
+counter = counter - 1
+</pre>
+                            <p>Similarly, the <code>*=</code> and <code>/=</code> operators do the equivalent for
+                                multiplication and division, respectively:</p>
+                            <pre lang="swift">
+var counter: Int = 10
+
+counter *= 3  // same as counter = counter * 3
+// counter = 30
+
+counter /= 2  // same as counter = counter / 2
+// counter = 15
+</pre>
+                            <h3>Mini-exercises</h3>
+                            <p>If you haven’t been following along with the code in Xcode, now’s the time to create a
+                                new playground and try some exercises to test yourself!</p>
+                            <ol start="1">
+                                <li>
+                                    Declare a constant of type <code>Int</code> called <code>myAge</code> and set it to
+                                    your age.
+                                </li>
+                                <li>
+                                    Declare a variable of type <code>Double</code> called <code>averageAge</code>.
+                                    Initially, set it to your own age. Then, set it to the average of your age and my
+                                    own age of <code>30</code>.
+                                </li>
+                                <li>
+                                    Create a constant called <code>testNumber</code> and initialize it with whatever
+                                    integer you’d like. Next, create another constant called <code>evenOdd</code> and
+                                    set it equal to <code>testNumber</code> modulo 2. Now change <code>testNumber</code>
+                                    to various numbers. What do you notice about <code>evenOdd</code>?
+                                </li>
+                                <li>
+                                    Create a variable called <code>answer</code> and initialize it with the value <code>0</code>.
+                                    Increment it by <code>1</code>. Add <code>10</code> to it. Multiply it by
+                                    <code>10</code>. Then, shift it to the right by <code>3</code>. After all of these
+                                    operations, what’s the answer?
+                                </li>
+                            </ol>
+                            <h2>Key Points</h2>
+                            <ul>
+                                <li>
+                                    Code comments are denoted by a line starting with <code>//</code> or multiple lines
+                                    bookended with <code>/*</code> and <code>*/</code>.
+                                </li>
+                                <li>
+                                    Code comments can be used to document your code.
+                                </li>
+                                <li>
+                                    You can use <code>print</code> to write things to the debug area.
+                                </li>
+                                <li>
+                                    The arithmetic operators are:</p>
+                                    <pre lang="">
+Add: +
+Subtract: -
+Multiply: *
+Divide: /
+Remainder: %
+</pre>
+                                </li>
+                                <li>
+                                    Constants and variables give names to data.
+                                </li>
+                                <li>
+                                    Once you’ve declared a constant, you can’t change its data, but you can change a
+                                    variable’s data at any time.
+                                </li>
+                                <li>
+                                    Always give variables and constants meaningful names to save yourself and your
+                                    colleagues headaches later.
+                                </li>
+                                <li>
+                                    Operators to perform arithmetic and then assign back to the variable:</p>
+                                    <pre lang="">
+Add and assign: +=
+Subtract and assign: -=
+Multiply and assign: *=
+Divide and assign: /=
+</pre>
+                                </li>
+                            </ul>
+                            <h2>Challenges</h2>
+                            <p>Before moving on, here are some challenges to test your knowledge of variables and
+                                constants. You can try the code in a playground to check your answers.</p>
+                            <ol start="1">
+                                <li>
+                                    Declare a constant <code>exercises</code> with value 11 and a variable <code>exercisesSolved</code>
+                                    with value 0. Increment this variable every time you solve an exercise (including
+                                    this one).
+                                </li>
+                                <li>
+                                    Given the following code:
+                                </li>
+                            </ol>
+                            <pre lang="swift">
+age = 16
+print(age)
+age = 30
+print(age)
+</pre>
+                            <p>Declare <code>age</code> so that it compiles. Did you use <code>var</code> or
+                                <code>let</code>?</p>
+                            <ol start="3">
+                                <li>
+                                    Consider the following code:
+                                </li>
+                            </ol>
+                            <pre lang="swift">
+let a: Int = 46
+let b: Int = 10
+</pre>
+                            <p>Work out what <code>answer</code> equals when you replace the final line of code above
+                                with each of these options:</p>
+                            <pre lang="swift">
+// 1
+let answer1: Int = (a * 100) + b
+// 2
+let answer2: Int = (a * 100) + (b * 100)
+// 3
+let answer3: Int = (a * 100) + (b / 10)
+</pre>
+                            <ol start="4">
+                                <li>
+                                    Add parentheses to the following calculation. The parentheses should show the order
+                                    in which the operations are performed and should not alter the result of the
+                                    calculation.
+                                </li>
+                            </ol>
+                            <pre lang="swift">
+5 * 3 - 4 / 2 * 2
+</pre>
+                            <ol start="5">
+                                <li>
+                                    Declare two constants <code>a</code> and <code>b</code> of type <code>Double</code>
+                                    and assign both a value. Calculate the average of <code>a</code> and <code>b</code>
+                                    and store the result in a constant named <code>average</code>.
+                                </li>
+                                <li>
+                                    A temperature expressed in °C can be converted to °F by multiplying by 1.8 then
+                                    incrementing by 32. In this challenge, do the reverse: convert a temperature from °F
+                                    to °C. Declare a constant named <code>fahrenheit</code> of type <code>Double</code>
+                                    and assign it a value. Calculate the corresponding temperature in °C and store the
+                                    result in a constant named <code>celcius</code>.
+                                </li>
+                                <li>
+                                    Suppose the squares on a chessboard are numbered left to right, top to bottom, with
+                                    0 being the top-left square and 63 being the bottom-right square. Rows are numbered
+                                    top to bottom, 0 to 7. Columns are numbered left to right, 0 to 7. Declare a
+                                    constant <code>position</code> and assign it a value between 0 and 63. Calculate the
+                                    corresponding row and column numbers and store the results in constants named <code>row</code>
+                                    and <code>column</code>.
+                                </li>
+                                <li>
+                                    Declare constants named <code>dividend</code> and <code>divisor</code> of type
+                                    <code>Double</code> and assign both a value. Calculate the quotient and remainder of
+                                    an integer division of <code>dividend</code> by <code>divisor</code> and store the
+                                    results in constants named <code>quotient</code> and <code>remainder</code>.
+                                    Calculate the remainder without using the operator %.
+                                </li>
+                                <li>
+                                    A circle is made up of 2 radians, corresponding with 360 degrees. Declare a constant
+                                    <code>degrees</code> of type <code>Double</code> and assign it an initial value.
+                                    Calculate the corresponding angle in radians and store the result in a constant
+                                    named <code>radians</code>.
+                                </li>
+                                <li>
+                                    Declare four constants named <code>x1</code>, <code>y1</code>, <code>x2</code> and
+                                    <code>y2</code> of type <code>Double</code>. These constants represent the
+                                    2-dimensional coordinates of two points. Calculate the distance between these two
+                                    points and store the result in a constant named <code>distance</code>.
+                                </li>
+                                <li>
+                                    Increment variable <code>exercisesSolved</code> a final time. Use the print function
+                                    to print the percentage of exercises you managed to solve. The printed result should
+                                    be a number between 0 and 1.
+                                </li>
+                            </ol>
+                            <h2>Where to Go From Here?</h2>
+                            <p>You can download the final playground from this part — along with the solutions for the
+                                challenges above — <a
+                                    href="https://koenig-media.raywenderlich.com/uploads/2016/09/FinalAndChallengespart1.zip">from
+                                    this link</a>.</p>
+                            <p>In this tutorial, you’ve only dealt with only numbers, both integers and decimals. Of
+                                course, there’s more to the world of code than that! In the next part, you’re going to
+                                learn about more types such as strings, which allow you to store text.</p>
+                            <p>The next part in this tutorial series deals with types and operations; continue on to <a
+                                href="https://www.raywenderlich.com/143885/swift-tutorial-part-2-types-operations">Part
+                                2: Types and Operations</a> to carry on with your Swift adventures!</p>
+                            <p>We encourage you to try the challenges above; if you find a particularly interesting
+                                solution to one of the challenges, or have any questions or comments on this tutorial,
+                                please tell us about it in the discussion below!</p>
+                            <p><a href="http://raywenderlich.com/store/swift-apprentice"><img
+                                src="https://koenig-media.raywenderlich.com/uploads/2016/09/SA@2x-247x320.png"
+                                alt="swift-apprentice" width="100" height="130"
+                                class="alignright size-medium wp-image-143805"
+                                srcset="https://koenig-media.raywenderlich.com/uploads/2016/09/SA@2x-247x320.png 247w, https://koenig-media.raywenderlich.com/uploads/2016/09/SA@2x.png 267w"
+                                sizes="(max-width: 100px) 100vw, 100px"/></a></p>
+                            <p><i>This tutorial was taken from Chapters 1 and 2 of <a
+                                href="https://www.raywenderlich.com/store/swift-apprentice">Swift Apprentice, Second
+                                Edition</a> available from the raywenderlich.com store.</p>
+                            <p>The book has been completely updated to work with Xcode 8 and Swift 3. Check it out and
+                                let us know what you think!<i></p>
+
+                        </div>
+
+                        <div class="inline-video-ad" id="sub-banner-inline">
+                            <div class="inline-video-ad-wrapper">
+                                <a href="https://videos.raywenderlich.com/courses">
+                                    <div class="col-wrapper">
+                                        <div class="col">
+                                            <img
+                                                src="https://koenig-assets.raywenderlich.com/wp-content/themes/raywenderlich/images/global/video-yeti@2x.png"
+                                                alt="yeti holding videos">
+                                        </div>
+                                        <div class="col large-col">
+                                            <span>Want to learn even faster? Save time with our <span>video courses</span></span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+

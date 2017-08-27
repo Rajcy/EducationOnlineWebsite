@@ -1,0 +1,765 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<meta name="viewport" content="user-scalable=no">-->
+<title>个人中心</title>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a9879340bce6ba1e335b6cb892285b82";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <link href="css/school.css" rel="stylesheet" type="text/css" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.knob.js"></script>
+        <script>
+            $(function() {
+                $(".knob").knob();
+
+                // Example of infinite knob, iPod click wheel
+                var val,up=0,down=0,i=0
+                    ,$idir = $("div.idir")
+                    ,$ival = $("div.ival")
+                    ,incr = function() { i++; $idir.show().html("+").fadeOut(); $ival.html(i); }
+                    ,decr = function() { i--; $idir.show().html("-").fadeOut(); $ival.html(i); };
+                $("input.infinite").knob(
+                                    {
+                                    'min':0
+                                    ,'max':20
+                                    ,'stopper':false
+                                    ,'change':function(v){
+                                                if(val>v){
+                                                    if(up){
+                                                        decr();
+                                                        up=0;
+                                                    }else{up=1;down=0;}
+                                                }else{
+                                                    if(down){
+                                                        incr();
+                                                        down=0;
+                                                    }else{down=1;up=0;}
+                                                }
+                                                val=v;
+                                            }
+                                    }
+                                    );
+
+
+            });
+        </script>
+
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a9879340bce6ba1e335b6cb892285b82";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<style>
+/* 弹出框的样式*/
+    a, button {
+        color: #74716D;
+        text-decoration: none;
+        outline: none;
+        text-align: center;
+    }
+
+    button {
+        padding: 1em 2em;
+        outline: none;
+        font-weight: 600;
+        border: none;
+        color: #fff;
+        background: #43A047;
+
+    }
+
+    .button-wrap {
+        padding: 2.5em 0 0;
+        font-size: 1.25em;
+    }
+
+    button.trigger {
+        background: #43A047;
+        color: #fff;
+        border: none;
+    }
+    /* 弹出框的样式结束*/
+
+	.error{ color:#F00; margin-left:2px; margin-right:5px; font-size:14px; font-weight:bold; display:none; }
+	</style>
+
+   <link rel="stylesheet" type="text/css" href="css/dialog-normalize.css" />
+
+    <!-- 公共对话框样式 -->
+    <link rel="stylesheet" type="text/css" href="css/dialog.css" />
+    <!-- css3弹出动画样式 -->
+    <link rel="stylesheet" type="text/css" href="css/dialog-sandra.css" />
+
+    <script type="text/javascript" src="js/dialog-modernizr.custom.js"></script>
+</head>
+
+<body>
+<!--&lt;!&ndash;-粒子效果&ndash;&gt;-->
+<!--<div id="particles-js"></div>-->
+<!--&lt;!&ndash;-粒子效果结束&ndash;&gt;-->
+<div class="i_main">
+	<div id="i_right">
+        <ul>
+            <!--<li>手机APP</li>-->
+            <li class="i_right_position"><img src="images/home_wechat.png">
+                <div class="i_wechat"
+                     style="position:absolute; width:284px;height:212px; left:-80px; top:60px; display:none; z-index:6; background:url(images/i_wechat.png) no-repeat"></div>
+            </li>
+            <li class="i_right_position"><img src="images/home_weibo.png">
+                <div class="i_wechat"
+                     style="position:absolute; width:200px;height:212px; left:-80px; top:60px; display:none; z-index:6; background:url(images/weibo.png) no-repeat;background-size:cover"></div>
+            </li>
+            <li class="i_right_position"><img src="images/home_qq.png">
+                <div class="i_wechat"
+                     style="position:absolute; width:200px;height:212px; left:-80px; top:60px; display:none; z-index:6; background:url(images/qq.png) no-repeat;background-size:cover"></div>
+            </li>
+            <li class="i_right_personal" style="display: none"><a href="resume.html" class="login_resigest"><img
+                src="images/home_person.png"></a>
+            </li>
+            <li class="i_right_login"><a href="javascript:;" class="login_resigest"></a></li>
+        </ul>
+	</div>
+    <div id="i_menu">
+        <div id="i_menu_left" style="margin-left:50px;"><a href="index.html"><img src="images/logo.jpg"></a></div>
+        <div id="i_menu_right" style="margin-left:520px;line-height:35px; color:#FFF">
+            <ul>
+                <li><a href="index.html">&nbsp;首页&nbsp;</a></li>
+                <li><a href="course.html" >精品课程</a></li>
+                <li><a href="teachers.html" >师资力量</a></li>
+                <!--<li><a href="jobinform.html">招聘信息</a></li>-->
+                <li><a href="contact.html">联系我们</a></li>
+                <!--<li><a href="relations.html">投资关系</a></li>-->
+                <li><a href="materials.html">学习资料</a></li>
+            </ul>
+        </div><!--i_right结束-->
+    </div>
+
+    <div id="resume">
+    <div id="resume_content">
+    	<div class="resume_inform">
+<!--       		<h4 style="color:#00B900">头像上传：</h4>
+			<input type="file" name="file0" id="file0" multiple /><br>-->
+			<img src="images/img0.png" id="img0" >
+            <br>
+        	<!--<div class="resume_inform01_contenticon"><button type="button" class="resume_reserve" style="border:none; background:none; margin-right:20px; font-size:24px; color:#00D900"> √</button ></div>
+-->
+			<div class="resume_inform00">
+            	<label>*姓名：</label><input id="resume_username" class="auth" type="text" placeholder="黄维佳"><span class="error">用户名至少6位！</span><br>
+                <label>*学历：</label><input id="resume_degree"  class="auth"  type="text" placeholder="学历">　<span class="error">学历不能为空！</span>
+                <label>*电话：</label><input id="resume_phone"  class="auth" type="text" placeholder="188********"><span class="error">填写正确的手机号码！</span>
+            </div>
+            <div class="resume_inform01">
+            	<div class="resume_inform_title" style=" width:100%; height:75px; background-image:url(images/resume01.png); background-size:cover;"></div>
+                <div class="resume_inform_content">
+                <br><div style="font-size:14px; color:#61EA33">时间最近的教育经历:</div>
+                    <div class="resume_inform01_experience" >
+                    	<label id="resume_education_time01">*时间：</label><input  class="auth" id="resume_education_time" type="text" placeholder="2017-03-02"><span class="error">填写正确的时间格式！</span>　　<br>
+                        <label id="resume_education_school01">*学校：</label><input  class="auth"  id="resume_education_school" type="text" placeholder="您所毕业学校"><span class="error">您所毕业学校不能为空！</span><br>
+                        <label id="resume_education_special01">*专业：</label><input class="auth" id="resume_education_special" type="text" placeholder="艺术设计"><span class="error">您所学专业不能为空！</span><br>
+                        <label id="resume_education_textarea01">*主修课程：</label><br><textarea  class="auth" id="resume_education_textarea" name="" cols="" rows="" placeholder="主修课程基本会计、统计学、市场营销、国际市场营销、市场调查与预测、商业心理学、广告学、公共关系学、货币银行学、经济法、国际贸易、大学英语、经济数学、计算机应用等。" style="width:90%; height:auto; padding:30px;"></textarea><span class="error"><br>主修课程不能为空！</span>
+                    </div>
+                </div>
+            </div>
+            <div class="resume_inform02">
+            	<div class="resume_inform_title" style=" width:100%; height:75px; background-image:url(images/resume02.png); background-size:cover;"></div>
+            	<div class="resume_inform_content">
+                <!--	<div class="resume_inform01_contenticon"><button type="button" style="border:none; background:none; margin-right:20px;">  <img src="images/resumewrite.png"></button ><button type="button" style="border:none; background:none; margin-right:20px; font-size:24px; color:#00D900"> √</button ><button type="button" class="resume_inform_content_add02"  style="border:none; background:none"> <img src="images/resumeadd.png"></button><button type="button" class="resume_inform_content_remove02" style="border:none; background:none; margin-left:20px; font-size:24px; color:#00D900">X</button ></div>
+-->
+				<br><div style="font-size:14px; color:#61EA33">你的能力是:</div>
+					<div  class="resume_inform_contenticonadd" style="width:100%;height:auto; min-height:230px;color:#FFF;padding:20px; clear:both">
+            			<div class="resume_inform_contenticon"><input id="resume_contenticon_01"  class="knob"  class="auth" data-width="150" data-displayPrevious=true data-fgColor="#c6a1b5" data-skin="tron" data-thickness=".2" value="75"><br><input id="resume_contenticon_ablitiy01" type="text"  class="auth" placeholder="能力" class="resume_inform_ability"><span class="error"><br>填写您的能力！</span></div>
+						<div class="resume_inform_contenticon"><input id="resume_contenticon_02"  class="knob"  class="auth" data-width="150" data-displayPrevious=true data-fgColor="#dec67d" data-skin="tron" data-thickness=".2" value="75"><br><input id="resume_contenticon_ablitiy02" type="text"  class="auth" placeholder="能力" class="resume_inform_ability"><span class="error"><br>填写您的能力！</span></div>
+           				<div class="resume_inform_contenticon"><input id="resume_contenticon_03"  class="knob"  class="auth" data-width="150" data-displayPrevious=true data-fgColor="#86bfdd" data-skin="tron" data-thickness=".2" value="75"><br><input id="resume_contenticon_ablitiy03" type="text"  class="auth" placeholder="能力" class="resume_inform_ability"><span class="error"><br>填写您的能力！</span></div>
+						<div class="resume_inform_contenticon"><input id="resume_contenticon_04"  class="knob"  class="auth" data-width="150" data-displayPrevious=true data-fgColor="#d2d465" data-skin="tron" data-thickness=".2" value="75"><br><input id="resume_contenticon_ablitiy04" type="text"  class="auth" placeholder="能力" class="resume_inform_ability"><span class="error"><br>填写您的能力！</span></div>
+           				<div class="resume_inform_contenticon"><input id="resume_contenticon_05"  class="knob"  class="auth" data-width="150" data-displayPrevious=true data-fgColor="#ce7479" data-skin="tron" data-thickness=".2" value="75"><br><input id="resume_contenticon_ablitiy05" type="text"  class="auth" placeholder="能力" class="resume_inform_ability"><span class="error"><br>填写您的能力！</span></div>
+                    </div>
+                 <textarea id="resume_contenticon_textarea"  class="auth"  name="" cols="" rows="10" style="overflow:hidden; width:830px; resize : none; margin:0 20px; height:auto; padding:30px;" placeholder="1、3年以上店铺网页设计及平面设计工作经验；2、有扎实的美术功底、良好的创意思维和理解能力，具备品牌形象创意、设计执行的基本能力；3、精通Photoshop\Dreamweaver\Illustrator等设计软件，对图片渲染和视觉效果有较好认识；4、善于与人沟通，良好的团队合作精神和高度的责任感，能够承受压力，有创新精神，保证工作质量"></textarea>
+               <span class="error"><br>嘿！不要太懒啦~简单描述下啦！让我看看您的能力值有多高！</span>
+
+                </div>
+            </div>
+            <div class="resume_inform03">
+            	<div class="resume_inform_title" style=" width:100%; height:75px; background-image:url(images/resume03.png); background-size:cover;"></div>
+            	<div class="resume_inform_content">
+
+                	<!--<div class="resume_inform01_contenticon"><button type="button" style="border:none; background:none; margin-right:20px;">  <img src="images/resumewrite.png"></button ><button type="button" style="border:none; background:none; margin-right:20px; font-size:24px; color:#00D900"> √</button ><button type="button" class="resume_inform_content_add03"  style="border:none; background:none"> <img src="images/resumeadd.png"></button><button type="button" class="resume_inform_content_remove03" style="border:none; background:none; margin-left:20px; font-size:24px; color:#00D900">X</button ></div>
+-->						<br><div style="font-size:14px; color:#61EA33">最近的工作经历:</div>
+						<div  class="resume_inform_contentjobadd" style="width:100%;height:auto; color:#FFF;padding:20px; clear:both">
+						<div class="resume_inform_contentjob">
+                        	<div class="resume_inform_contentjob_left"><br><br><br><label>*时间：</label><input type="text" id="resume_contentjob_time"  class="auth"  placeholder="2017-03-03"><span class="error"><br>时间不能为空！</span><br><br><label>*职位：</label><input type="text"  class="auth"  id="resume_contentjob_position" placeholder="设计师"><span class="error"><br>职位不能为空！</span></div>
+                            <div class="resume_inform_contentjob_right"><div  class="" style="background-image:url(images/resume_inform_contentjob.png); background-position:center;  width:18px; height:230px; float:left; margin:0 20px;"></div><textarea name=""  class="auth" id="resume_contentjob_content" cols="" rows="" style="width:500px; height:100px; margin-top:25px; float:left; padding:30px" placeholder="1、团队管理，电商产品管理，电子商务策划项目管理；2、网站需求分析，产品设计，产品跟踪，及后续产品优化工作；3、与研发、营销、客服配合，展开产品开发、销售、售后工作；4、产品应用市场调研和分析；5、公司品牌宣传，产品推广，负责公司网站策划和运营工作。"></textarea><span class="error"><br>嘿，不要太懒，描述下你的经历，才能为您推荐更合适的岗位哦！</span></div>
+                        </div><br>
+<!--						<div class="resume_inform_contentjob">
+                        	<div class="resume_inform_contentjob_left"><br><br><br><label>时间：</label><input type="text" placeholder="2016/3/3"><br><label>职位：</label><input type="text" placeholder="设计师"></div>
+                            <div class="resume_inform_contentjob_right"><div class="" style="background-image:url(images/resume_inform_contentjob.png); background-position:center;  width:18px; height:230px; float:left; margin:0 20px;"></div><textarea name="" cols="" rows="" style="width:500px; height:100px; margin-top:25px; float:left; padding:30px" placeholder="1、团队管理，电商产品管理，电子商务策划项目管理；2、网站需求分析，产品设计，产品跟踪，及后续产品优化工作；3、与研发、营销、客服配合，展开产品开发、销售、售后工作；4、产品应用市场调研和分析；5、公司品牌宣传，产品推广，负责公司网站策划和运营工作。"></textarea></div>
+                        </div><br>-->
+                    </div>
+               </div>
+            </div>
+
+<!--            <div class="resume_inform04">
+            	<div class="resume_inform_title" style=" width:100%; height:75px; background-image:url(images/resume04.png); background-size:cover;"></div>
+            	<div class="resume_inform_content">
+            			<div style="width:100%;height:auto; min-height:200px;color:#FFF;padding:20px; clear:both">
+                    	<label>上传作品：</label><input type="text"  placeholder="上传不超过200kb的word/img/png/pdf文件 " style="width:250px; font-size:10px; color:#D5D5D5"><button type="button" style="background:#1E9610; border:none;-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius:5px; color:#fff; width:80px; height:30px; margin:0 20px;">浏览</button><button type="button" style="border:none;background:#1E9610;-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius:5px; color:#fff; width:80px; height:30px; ">上传</button>
+                    </div>
+                </div>
+           </div>-->
+           <input type="button" id="allpresever" style="border:none; margin-bottom:30px; color:#FFF; background-color:#00AE00;float:right; width:100px; height:38px; margin:0 auto; text-align:center" value="保存" ></div>
+      		<br><br><br>
+            <div class="resume_button_inform" style="width:auto; font-size:14px; font-weight:bold;float:right; color:#F00;height:18px;"></div>
+      </div>
+    </div>
+    </div>
+
+
+
+    <div class="i_link2">
+    	<div class="i_link_01">
+        	<ul class="i_link_details01">
+            	<li ><a href="relations.html">关于我们</a></li>
+                <li ><a href="contact.html">联系我们</a></li>
+                <li ><a href="javascript:;">版权所有</a></li>
+                <li ><a href="javascript:;">法律声明</a></li>
+                <li class="i_link_clear"><a href="javascript:;">投诉与建议</a></li>
+                <br>
+            </ul>
+            <ul class="i_link_details02">
+                <li class="i_link_details03"><a>技术支持: 277064007@qq.com</a></li>
+				 <li class="i_link_details03"><a>联系电话: 010-62530023</a></li>
+                <li class="i_link_details03"><a>地    址: 广州市天河区珠江新城珠江东路30号广州银行大厦11层</a></li>
+            </ul>
+        </div>
+
+        <div class="i_link_details04">东方标准X版权所有	@2016</div>
+         <div class="i_link_02"><img src="images/i_wechat01.png" width="120px" height="120px"/><br>扫一扫二维码关注微信服务号</div>
+
+	</div>
+<!----------弹窗设置-------------->
+    <button id="dialog_show" data-dialog="somedialog" class="trigger" style="display:none"></button>
+    <div id="somedialog" class="dialog" style=" z-index: 2;">
+    <div class="dialog__overlay"></div>
+    <div class="dialog__content" >
+    	<div class="resume_prompt" style="font-size:0.8em; line-height:30px; text-align:center;color:#FF8000;"></div>
+       <h2 id="dialog_details" style="text-align: center;"><strong ></strong>></h2><div style="text-align: center;"><button class="action dialogbutton" id="login_sure" data-dialog-close>确定</button></div>
+    </div>
+	</div>
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	var storage=window.localStorage;
+	var config=storage.getItem("token");
+	var phone=storage.getItem("username");
+	if(config!=""&& phone!=null){
+		$('.i_right_login a').html("&nbsp;登出&nbsp;");
+        $('.i_right_personal').css("display", "inline");
+
+        $.get('http://api.xueshenx.com/pc/userinfo?token='+config, function(data) {
+            //alert(data.resultData.data.education);
+            var name = data.resultData.data.name;
+            var degree = data.resultData.data.degree;
+            var number = data.resultData.data.phone;
+
+            var edu = JSON.parse(data.resultData.data.education);
+            var skill = JSON.parse(data.resultData.data.skill);
+            var job = JSON.parse(data.resultData.data.job);
+
+            $("#resume_username").val(name);
+            $("#resume_degree").val(degree);
+            $("#resume_phone").val(phone);
+
+            $("#resume_education_time").val(edu.education_time);
+            $("#resume_education_school").val(edu.education_school);
+            $("#resume_education_special").val(edu.education_special);
+            $("#resume_education_textarea").val(edu.education_textarea);
+
+            $("#resume_contenticon_01").val(skill.r_contenticon_ability01);
+            $("#resume_contenticon_02").val(skill.r_contenticon_ability02);
+            $("#resume_contenticon_03").val(skill.r_contenticon_ability03);
+            $("#resume_contenticon_04").val(skill.r_contenticon_ability04);
+            $("#resume_contenticon_05").val(skill.r_contenticon_ability05);
+            $("#resume_contenticon_ablitiy01").val(skill.ability01);
+            $("#resume_contenticon_ablitiy02").val(skill.ability02);
+            $("#resume_contenticon_ablitiy03").val(skill.ability03);
+            $("#resume_contenticon_ablitiy04").val(skill.ability04);
+            $("#resume_contenticon_ablitiy05").val(skill.ability05);
+            $("#resume_contenticon_textarea").val(skill.contenticon_textarea);
+
+            $("#resume_contentjob_time").val(job.contentjob_time);
+            $("#resume_contentjob_position").val(job.contentjob_position);
+            $("#resume_contentjob_content").val(job.contentjob_content);
+        });
+
+		}
+	else{
+		$('.i_right_login a').html("&nbsp;注册/登录&nbsp;");
+		}
+
+
+    //平台、设备和操作系统,  判断是否为Windows打开网页
+    var system = {
+        win: false,
+    };
+    //检测平台
+    var p = navigator.platform;
+    system.win = p.indexOf("Win") == 0;
+    if (system.win) {
+        //配置
+        var config = {
+            vx: 4,//点x轴速度,正为右，负为左
+            vy: 4,//点y轴速度
+            height: 2,//点高宽，其实为正方形，所以不宜太大
+            width: 2,
+            count: 200,//点个数
+            color: "248, 44, 68",//点颜色
+            stroke: "248, 44, 68",//线条颜色
+            dist: 6000,//点吸附距离
+            e_dist: 20000,//鼠标吸附加速距离
+            max_conn: 10//点到点最大连接数
+        }
+        //调用
+        CanvasParticle(config);
+    }
+
+    var ScreenWidth = $(document).width();
+    if( ScreenWidth <1280){
+        $('#i_right').css({"margin-right": "6%"});
+    }
+    else if( ScreenWidth >= 1280 &&  ScreenWidth <1400){
+        // $('.detailViewWrapper').css({"margin-left": ScreenWidth * 0.12});
+        $('#i_right').css({"margin-right": "11%"});
+    }
+    else if(ScreenWidth >=1400 &&  ScreenWidth <1500){
+        // $('.detailViewWrapper').css({"margin-left": ScreenWidth * 0.16});
+        $('#i_right').css({"margin-right": "16%"});
+    }else if(ScreenWidth > 1500) {
+        // $('.detailViewWrapper').css({"margin-left": ScreenWidth * 0.24});
+    }
+});
+</script>
+
+<script>
+$('#i_right ul li').hover(
+
+
+	function(){
+		$(this).find('.i_wechat').css({'display':'block'})
+	},
+	function(){
+		$(this).find('.i_wechat').css({'display':'none'})
+	}
+
+)
+</script>
+<script type="text/javascript">
+$('.i_right_login a').click(function () {
+	 	var storage=window.localStorage;
+		var config=storage.getItem("token");
+		console.dir(config);
+	 	if(config!=null)
+		 {
+			$.post("http://api.xueshenx.com/common/logout",{"token": config},function(data)
+		 	{
+				//console.dir(data.resultData.code);
+				switch (data.resultData.code) {
+					case 200:
+					   $('.i_right_login a').html("注册/登录");
+						localStorage.removeItem('token');
+						localStorage.removeItem('username');
+						window.location.href = 'login.html';
+						break;
+					case 201:
+					    alert("退出登录失败");
+						break;
+				}
+			});
+
+		 }
+	 else
+	 {
+	  //alert("你还未登录，请先登录");
+	  window.location.href = 'login.html';
+	}
+});
+
+$('#resume_username').blur(function(){
+	val=this.value;
+	if(val.length<=0&&val.length<6){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_degree').blur(function(){
+	val=this.value;
+	if(val==""){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_phone').blur(function(){
+	val=this.value;
+	var reg2_phone=/^1\d{10}$/;
+	if(reg2_phone.test(val)!=true){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_education_time').blur(function(){
+	val=this.value;
+	var reg2_phone=/^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$/;
+	if(reg2_phone.test(val)!=true){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_education_school').blur(function(){
+	val=this.value;
+	if(val==""){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+
+$('#resume_education_special').blur(function(){
+	val=this.value;
+	if(val==""){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_education_textarea').blur(function(){
+	val=this.value;
+	if(val==""){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_contenticon_ablitiy01').blur(function(){
+	val=this.value;
+	if(val==""){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_contenticon_ablitiy02').blur(function(){
+	val=this.value;
+	if(val==""){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_contenticon_ablitiy03').blur(function(){
+	val=this.value;
+	if(val==""){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_contenticon_ablitiy04').blur(function(){
+	val=this.value;
+	if(val==""){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_contenticon_ablitiy05').blur(function(){
+	val=this.value;
+	if(val==""){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_contenticon_textarea').blur(function(){
+	val=this.value;
+	if(val==""){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_contentjob_time').blur(function(){
+	val=this.value;
+	var reg2_phone=/^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$/;
+	if(reg2_phone.test(val)!=true){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$('#resume_contentjob_position').blur(function(){
+	val=this.value;
+	if(val==""){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+$('#resume_contentjob_content').blur(function(){
+	val=this.value;
+	if(val==""){
+			$(this).data({'typ':'0'});
+			$(this).next().show();
+		}
+	else{
+			$(this).data({'typ':'1'});
+			$(this).next().hide();
+		}
+})
+
+$("#allpresever").click(function () {
+		$('.auth').blur();
+		var storage=window.localStorage;
+		var config=storage.getItem("token");
+		/*tot=0;
+		$('.auth').each(function(){
+				tot+=$(this).data('typ');
+			});
+		//alert(tot);
+		if(tot!=3){
+			return false;
+		}*/
+		var r_username = $("#resume_username").val();
+	 	var r_phone = $("#resume_phone").val();
+		var r_degree = $("#resume_degree").val();
+
+		var r_education_time = $("#resume_education_time").val();
+	 	var r_education_school = $("#resume_education_school").val();
+		var r_education_special = $("#resume_education_special").val();
+		var r_education_textarea = $("#resume_education_textarea").val();
+
+	 	var r_contenticon_01 = $("#resume_contenticon_01").val();
+		var r_contenticon_ability01= $("#resume_contenticon_ablitiy01").val();
+	 	var r_contenticon_02 = $("#resume_contenticon_02").val();
+		var r_contenticon_ability02= $("#resume_contenticon_ablitiy02").val();
+	 	var r_contenticon_03 = $("#resume_contenticon_03").val();
+		var r_contenticon_ability03= $("#resume_contenticon_ablitiy03").val();
+	 	var r_contenticon_04= $("#resume_contenticon_04").val();
+		var r_contenticon_ability04= $("#resume_contenticon_ablitiy04").val();
+	 	var r_contenticon_05= $("#resume_contenticon_05").val();
+		var r_contenticon_ability05= $("#resume_contenticon_ablitiy05").val();
+		var r_contenticon_textarea= $("#resume_contenticon_textarea").val();
+
+		var r_contentjob_time= $("#resume_contentjob_time").val();
+	 	var r_contentjob_position = $("#resume_contentjob_position").val();
+		var r_contentjob_content = $("#resume_contentjob_content").val();
+		var reg2_phone=/^1\d{10}$/;
+
+	 	if(reg2_phone.test(r_phone)==true
+		&& r_username!=""
+		&& r_degree!=""
+
+		&& r_education_time!=""
+		&& r_education_school!=""
+		&& r_education_special!=""
+		&& r_education_textarea!=""
+
+		&& r_contenticon_01!=""&&r_contenticon_ability01!=""
+		&& r_contenticon_02!=""&&r_contenticon_ability02!=""
+		&& r_contenticon_03!=""&&r_contenticon_ability03!=""
+		&& r_contenticon_04!=""&&r_contenticon_ability04!=""
+		&& r_contenticon_05!=""&&r_contenticon_ability05!=""
+		&& r_contenticon_textarea!=""
+
+		&& r_contentjob_time!=""
+		&& r_contentjob_position!=""
+		&& r_contentjob_content!="")
+		 {
+			var edcations={education_time:r_education_time,education_school:r_education_school,education_special:r_education_special,education_textarea:r_education_textarea};
+			var edc= JSON.stringify(edcations);
+			var icon = {r_contenticon_ability01:r_contenticon_01,r_contenticon_ability02:r_contenticon_02,r_contenticon_ability03:r_contenticon_03,r_contenticon_ability04:r_contenticon_04,r_contenticon_ability05:r_contenticon_05,ability01:r_contenticon_ability01,ability02:r_contenticon_ability02,ability03:r_contenticon_ability03,ability04:r_contenticon_ability04,ability05:r_contenticon_ability05,contenticon_textarea:r_contenticon_textarea};
+			var icon2= JSON.stringify(icon);
+			//alert(able);
+			var job={contentjob_time:r_education_time,contentjob_position:r_contentjob_position,contentjob_content:r_contentjob_content};
+			var job2= JSON.stringify(job);
+			//alert(job2);
+			$.post("http://api.xueshenx.com/pc/userinfo",{token:config,phone:r_phone,name:r_username,degree:r_degree,education:edc,skill:icon2,job:job2},function(data)
+		 	{
+
+				console.dir(data);
+
+				switch (data.resultData.code) {
+					case 200:
+						$("#dialog_show").click();
+                        $("#dialog_details").html("保存成功");
+                        $("#login_sure").click(function  () {
+                            window.location.href = 'index.html';
+
+                        })
+						 $(".dialog__overlay").click(function () {
+                            window.location.href = 'index.html';
+                        })
+						break;
+
+
+					case 201:
+
+						$('.resume_prompt').append("*内容错误!");
+
+						break;
+
+
+				}
+			});
+
+		 }
+	 else
+	 {
+	  $('.auth').blur();
+	  $('.resume_button_inform').append("*亲~所有内容为必填项哦!");
+	 }
+})
+
+</script>
+<script>
+//01的添加与删除
+$('.resume_inform_content_add01').click(function () {
+	$('.resume_inform_content').append('<div class="resume_inform01_experience"><label>时间：</label><input type="text" placeholder="2017/3/2"><br><label>学校：</label><input type="text" placeholder="您所毕业学校"><br><label>专业：</label><input type="text" placeholder="艺术设计"><br><label>主修课程：</label><br><textarea name="" cols="" rows="" placeholder="主修课程基本会计、统计学、市场营销、国际市场营销、市场调查与预测、商业心理学、广告学、公共关系学、货币银行学、经济法、国际贸易、大学英语、经济数学、计算机应用等。" style="width:90%; height:auto; padding:30px;"></textarea></div>');
+	});
+$('.resume_inform_content_remove01').click(function () {
+	$('.resume_inform01_experience:not(:first)').remove('.resume_inform01_experience:last');
+	});
+//02的添加与删除
+$('.resume_inform_content_add02').click(function () {
+	//$('.resume_inform_content').add('.resume_inform01_experience');
+	$('.resume_inform_contenticonadd').append('<div class="resume_inform_contenticon"><input class="knob" data-width="150" data-displayPrevious=true data-fgColor="#ce7479" data-skin="tron" data-thickness=".2" value="75"><br><input type="text" placeholder="能力" class="resume_inform_ability"></div>');
+	});
+	$('.resume_inform_content_remove02').click(function () {
+	$('.resume_inform_contenticon:not(:first)').remove('.resume_inform_contenticon:last');
+	});
+//03的添加与删除
+$('.resume_inform_content_add03').click(function () {
+	//$('.resume_inform_content').add('.resume_inform01_experience');
+	$('.resume_inform_contentjobadd').append('<div class="resume_inform_contentjob"><div class="resume_inform_contentjob_left"><br><br><br><label>时间：</label><input type="text" placeholder="2016/3/3"><br><label>职位：</label><input type="text" placeholder="设计师"></div><div class="resume_inform_contentjob_right"><div class="" style="background-image:url(images/resume_inform_contentjob.png); background-position:center;  width:18px; height:230px; float:left; margin:0 20px;"></div><textarea name="" cols="" rows="" style="width:500px; height:100px; margin-top:25px; float:left; padding:30px" placeholder="1、团队管理，电商产品管理，电子商务策划项目管理；2、网站需求分析，产品设计，产品跟踪，及后续产品优化工作；3、与研发、营销、客服配合，展开产品开发、销售、售后工作；4、产品应用市场调研和分析；5、公司品牌宣传，产品推广，负责公司网站策划和运营工作。"></textarea></div></div><br>');
+	});
+	$('.resume_inform_content_remove03').click(function () {
+	$('.resume_inform_contentjob:not(:first)').remove('.resume_inform_contentjob:last');
+	});
+</script>
+
+<!--<script>
+$("#file0").change(function(){
+ var objUrl = getObjectURL(this.files[0]) ;
+ console.log("objUrl = "+objUrl) ;
+ if (objUrl) {
+  $("#img0").attr("src", objUrl) ;
+ }
+}) ;
+//建立一個可存取到該file的url
+function getObjectURL(file) {
+ var url = null ;
+ if (window.createObjectURL!=undefined) { // basic
+  url = window.createObjectURL(file) ;
+ } else if (window.URL!=undefined) { // mozilla(firefox)
+  url = window.URL.createObjectURL(file) ;
+ } else if (window.webkitURL!=undefined) { // webkit or chrome
+  url = window.webkitURL.createObjectURL(file) ;
+ }
+ return url ;
+}
+</script>-->
+<script type="text/javascript" src="js/dialog-classie.js"></script>
+<script type="text/javascript" src="js/dialogFx.js"></script>
+<script type="text/javascript">
+    (function() {
+
+        var dlgtrigger = document.querySelector( '[data-dialog]' ),
+            somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+            dlg = new DialogFx( somedialog );
+
+        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+    })();
+</script>
+<!--粒子效果-->
+<!--<script src="js/particles.js"></script>-->
+<!--<script src="js/app.js"></script>-->
+<script type="text/javascript" src="js/canvas-particle.js"></script>
+</body>
+</html>

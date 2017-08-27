@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>
+<html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>
+<html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>
+<html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+<html lang="en">
+<link rel="stylesheet" href="css/school.css"/>
+
+<link href="css/jplayer.blue.monday.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+<!--课程-->
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a9879340bce6ba1e335b6cb892285b82";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script type="text/javascript">
+    var JPLAYER;
+    $(document).ready(function () {
+
+        JPLAYER = new jPlayerPlaylist({
+                jPlayer: "#jquery_jplayer_1",
+                cssSelectorAncestor: "#jp_container_1"
+            }, [
+                {
+
+                    title: "第一单元-第一章",
+                    artist: "Blender Foundation",
+                    free: true,
+                    m4v: "http://olm3zb2gw.bkt.clouddn.com/java/1/1/java-1-1-1.mp4",
+                    poster: "images/j_banner02.png"
+                },
+
+            ],
+            {
+                swfPath: "../js",
+                supplied: "webmv,ogv,m4v",
+                size: {
+                    width: "600px",
+                    height: "400px",
+                    cssClass: "jp-video-360p"
+                },
+                useStateClassSkin: true,
+                autoBlur: false,
+                smoothPlayBar: true,
+                keyEnabled: true
+            });
+
+    });
+</script>
+<!--<style>
+ 弹出框的样式
+    a, button {
+        color: #74716D;
+        text-decoration: none;
+        outline: none;
+        text-align: center;
+    }
+
+    .dialogbutton {
+        padding: 1em 2em;
+        outline: none;
+        font-weight: 600;
+        border: none;
+        color: #fff;
+        background: #43A047;
+
+    }
+
+    .button-wrap {
+        padding: 2.5em 0 0;
+        font-size: 1.25em;
+    }
+
+    button.trigger {
+        background: #43A047;
+        color: #fff;
+        border: none;
+    }
+     弹出框的样式结束
+</style>-->
+    <link rel="stylesheet" type="text/css" href="css/dialog-normalize.css" />
+    <!-- 公共对话框样式 -->
+    <link rel="stylesheet" type="text/css" href="css/dialog.css" />
+    <!-- css3弹出动画样式 -->
+    <link rel="stylesheet" type="text/css" href="css/dialog-sandra.css" />
+    <script type="text/javascript" src="js/dialog-modernizr.custom.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>东方标准X视频播放页</title>
+</head>
+<body>
+<!--&lt;!&ndash;-粒子效果&ndash;&gt;-->
+<!--<div id="particles-js"></div>-->
+<!--&lt;!&ndash;-粒子效果结束&ndash;&gt;-->
+<div class="i_main">
+    <div id="i_right">
+        <ul>
+            <!--<li>手机APP</li>-->
+            <li class="i_right_position"><img src="images/home_wechat.png">
+                <div class="i_wechat"
+                     style="position:absolute; width:284px;height:212px; left:-80px; top:60px; display:none; z-index:6; background:url(images/i_wechat.png) no-repeat"></div>
+            </li>
+            <li class="i_right_position"><img src="images/home_weibo.png">
+                <div class="i_wechat"
+                     style="position:absolute; width:200px;height:212px; left:-80px; top:60px; display:none; z-index:6; background:url(images/weibo.png) no-repeat;background-size:cover"></div>
+            </li>
+            <li class="i_right_position"><img src="images/home_qq.png">
+                <div class="i_wechat"
+                     style="position:absolute; width:200px;height:212px; left:-80px; top:60px; display:none; z-index:6; background:url(images/qq.png) no-repeat;background-size:cover"></div>
+            </li>
+            <li class="i_right_personal" style="display: none"><a href="resume.html" class="login_resigest"><img
+                src="images/home_person.png"></a>
+            </li>
+            <li class="i_right_login"><a href="javascript:;" class="login_resigest"></a></li>
+        </ul>
+    </div>
+    <div id="i_menu">
+        <div id="i_menu_left" style="margin-left:50px;"><a href="index.html"><img src="images/logo.jpg"></a></div>
+        <div id="i_menu_right" style="margin-left:520px;line-height:35px; color:#FFF">
+            <ul>
+                <li><a href="index.html">&nbsp;首页&nbsp;</a></li>
+                <li><a href="course.html" >精品课程</a></li>
+                <li><a href="teachers.html" >师资力量</a></li>
+                <!--<li><a href="jobinform.html">招聘信息</a></li>-->
+                <li><a href="contact.html">联系我们</a></li>
+                <!--<li><a href="relations.html">投资关系</a></li>-->
+                <li><a href="materials.html">学习资料</a></li>
+            </ul>
+        </div><!--i_right结束-->
+    </div>
+</div>
+        <!------------------------------------------>
+<div class="coursemain">
+<div class="coursemain_content">
+    <div id="main" >
+   <div class="detailViewWrapper">
+     <div id="videoList">
+        <ul>
+            <li class="highlighted" id="course_java"><a href="#"></a><div class="courseAvatarSmall" style="background-image:url(images/course_java_small.png);"></div><div class="courseName">Java完整视频<br /> 李能子老师</div></li>
+            <li id="course_swift"><a href="#"></a><div class="courseAvatarSmall" style="background-image:url(images/course_swift_small.png);"></div><div class="courseName">Swift游戏开发实战<br /> 黄伟佳老师 </div></li>
+            <li id="course_android"><a href="#"></a><div class="courseAvatarSmall" style="background-image:url(images/course_android_small.png);"></div><div class="courseName">Android从基础到实战<br /> 杨老师 </div></li>
+            <li id="course_ui"><a href="#"></a><div class="courseAvatarSmall" style="background-image:url(images/course_ui_small.png);"></div><div class="courseName">UI设计之全解析<br /> 边力老师 / 黄伟佳老师</div></li>
+            <li id="course_h5"><a href="#"></a><div class="courseAvatarSmall" style="background-image:url(images/course_h5_small.png);"></div><div class="courseName">H5开发实战<br /> 廖军区老师</div></li>
+            <li id="course_vr"><a href="#"></a><div class="courseAvatarSmall" style="background-image:url('images/course_vr_small.png');"></div><div class="courseName">VR从基础到实战<br /> 张老师</div></li>
+            <li id="course_ar"><a href="#"></a><div class="courseAvatarSmall" style="background-image:url('images/course_ar_small.png');"></div><div class="courseName">AR之全解析<br /> 苗老师</div></li>
+			<li id="course_applet"><a href="#"></a><div class="courseAvatarSmall" style="background-image:url('images/course_wechat_small.png');"></div><div class="courseName">微信小程序之全解析<br /> 小胡老师</div></li>
+        </ul>
+     </div>
+    </div>
+        <!------------------------------------------->
+    <div class="detailViewWrapper" style=" width:700px; ">
+        <div id="detailView" style="height:500px;">
+            <div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player">
+                <!--外部jp-type-playlist-->
+                <div class="jp-type-playlist" style="background-color:#000">
+                    <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                    <div class="jp-gui">
+                        <div class="jp-video-play">
+                            <button class="jp-video-play-icon" role="button" tabindex="0">play</button>
+                        </div>
+                        <div class="jp-interface">
+                            <div class="jp-progress">
+                                <div class="jp-seek-bar">
+                                    <div class="jp-play-bar"></div>
+                                </div>
+                            </div>
+                            <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+                            <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+                            <div class="jp-controls-holder">
+                                <div class="jp-controls">
+                                    <button class="jp-previous" role="button" tabindex="0">previous</button>
+                                    <button class="jp-play" role="button" tabindex="0">play</button>
+                                    <button class="jp-next" role="button" tabindex="0">next</button>
+                                    <button class="jp-stop" role="button" tabindex="0">stop</button>
+                                </div>
+                                <div class="jp-volume-controls">
+                                    <button class="jp-mute" role="button" tabindex="0">mute</button>
+                                    <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+                                    <div class="jp-volume-bar">
+                                        <div class="jp-volume-bar-value"></div>
+                                    </div>
+                                </div>
+                                <div class="jp-toggles">
+                                    <button class="jp-repeat" role="button" tabindex="0">repeat</button>
+                                    <button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+                                    <button class="jp-full-screen" role="button" tabindex="0">full screen</button>
+                                </div>
+                            </div>
+                            <div class="jp-details">
+                                <div class="jp-title" aria-label="title">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jp-playlist"  style="display:none">
+                        <ul>
+                            <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="jp-no-solution">
+                        <span>Update Required</span>
+                        To play the media you will need to either update your browser to a recent version or update your
+                        <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-------------------------------------------------------------------------------------------------------------------------------->
+
+    <div id="java_menu" style="background-color:#FFF">
+        <div id="java_menu_left">
+            <div id="java_menu_font">目录</div>
+            <div class="java">
+                <ul id="listdata" class="java_01">
+                </ul>
+            </div>
+        </div>
+        <div class="java_menu_right_all" style="float:right; width:50%">
+        <div class="java_menu_right">
+            <div class="java_teacher">
+                <img id="teacher_icon" src="images/j_teacher.png" width="80" height="80"/>
+                <p id="teacher_name">高级讲师：李能子</p>
+                <div id="teacher_describe" class="java_teacher_content">
+                    广东开源软件促进协会首席专家，7+年IT开发经验；资深移动互联网技术大咖，精通java开源技术、SSM、SSH开发框架等多个领域；国内知名IT项目经理，曾任职移动、联通、摩托罗拉等多家国内IT名企，多年超大型项目管理和资深架构经验。
+                </div>
+            </div>
+        </div>
+        <div class="java_menu_right">
+            <div class="java_teacher">
+                课程简介
+                <div class="java_teacher_content" id="course_describe">
+                    Java是一门面向对象编程语言，不仅吸收了C++语言的
+                    各种优点，还摒弃了C++里难以理解的多继承、指
+                    针等概念，因此Java语言具有功能强大和简单易用
+                    两个特征。Java语言作为静态面向对象编程语
+                    言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程。
+                </div>
+            </div>
+        </div>
+        <div class="java_menu_right">
+            <div class="java_teacher">
+                问答:
+                <div class="java_teacher_content">
+                    <ul id="course_quest">
+                        <li>老师， 为什么 -0/3 结果是 0，而 -0.0/3.0 结果是 -0.0？
+                            <span>在Java里，整数是用补码表示的。在补码中0只有一种表示方法。另一方面，浮点数则是用 IEEE 标准表示的, 对于0有两种表示方法， 0 和 -0。</span>
+                        </li>
+                        <li>老师， 为什么判断字符串相等不能使用 == ？
+                            <span>这反映了基础类型（int, double, boolean）和引用类型（String）的区别。</span>
+                        </li>
+                        <li>老师， 我可以用 % 除以一个小数吗？
+                            <span>当然可以。比如，如果 angle 是一个非负数，那么 angle % (2 * Math.PI) 就会把 angle 转换到 0 到 2 π 之间。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+   </div><!--main结束-->
+   </div><!--coursemain_content结束-->
+	</div><!--coursemain结束-->
+
+    <div class="i_link">
+        <div class="i_link_01">
+            <ul class="i_link_details01">
+               <li ><a href="relations.html">关于我们</a></li>
+                <li ><a href="contact.html">联系我们</a></li>
+                <li ><a href="javascript:;">版权所有</a></li>
+                <li ><a href="javascript:;">法律声明</a></li>
+                <li class="i_link_clear"><a href="javascript:;">投诉与建议</a></li>
+                <br>
+            </ul>
+            <ul class="i_link_details02">
+                <li class="i_link_details03"><a>技术支持: 277064007@qq.com
+                </a></li>
+                <li class="i_link_details03"><a>联系电话: 010-62530023
+                </a></li>
+                <li class="i_link_details03"><a>地    址: 广州市天河区珠江新城珠江东路30号广州银行大厦11层</a></li>
+            </ul>
+        </div>
+
+        <div class="i_link_details04">东方标准X版权所有	@2016</div>
+        <div class="i_link_02"><img src="images/i_link01.jpg" width="120px" height="120px"/><br>扫一扫二维码关注微信公众号</div>
+
+    </div><!---i_link结束-->
+
+    <!----------弹窗设置-------------->
+    <button id="dialog_show" data-dialog="somedialog" class="trigger dialogbutton" style="display:none"></button>
+    <div id="somedialog" class="dialog" style=" z-index: 2;">
+    <div class="dialog__overlay"></div>
+    <div class="dialog__content" >
+        <h2 id="dialog_details" style="text-align: center;"><strong ></strong>></h2><div style="text-align: center;"><button class="action dialogbutton" id="login_sure" data-dialog-close>确定</button></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var storage=window.localStorage;
+        var config=storage.getItem("token");
+        var phone=storage.getItem("username");
+        var isvip=storage.getItem("isvip");
+	    var vipdate=storage.getItem("viptime");
+	   	var mydate = new Date();
+    	var year=mydate.getFullYear();
+    	var month=(mydate.getMonth()+1);
+    	var date= mydate.getDate();
+		if(month<=9){
+			var newmoth="0"+month;
+			month=newmoth;
+		};
+		if(date<=9){
+			var newdate="0"+date;
+			date=newdate;
+		};
+		var datetime=year+"-"+month+"-"+date;
+		var datetime2 = parseInt(datetime.replace(/-/g, ''));
+    	var vipdate2 = parseInt(vipdate.replace(/-/g, ''));
+		//alert(vipdate2+"+"+datetime2);
+        if(config!=""&& phone!=null){
+            $('.i_right_login a').html("登出");
+            $('.i_right_personal').css("display", "inline");
+            if(isvip != 1 && vipdate2<datetime2 ){
+				$("#dialog_show").click();
+                        $("#dialog_details").html("请先成为VIP，即可观看");
+                        $("#login_sure").click(function  () {
+                            window.location.href = 'payprocess.html';
+                        })
+						 $(".dialog__overlay").click(function () {
+                            window.location.href = 'payprocess.html';
+                        })
+
+            }
+        }
+        else{
+			$("#dialog_show").click();
+                        $("#dialog_details").html("请先登录");
+                        $("#login_sure").click(function  () {
+                            window.location.href = 'login.html';
+                        })
+				        $(".dialog__overlay").click(function () {
+                             window.location.href = 'login.html';
+                        })
+            $('.i_right_login a').html("注册/登录");
+        }
+
+
+        //平台、设备和操作系统,  判断是否为Windows打开网页
+        var system = {
+            win: false,
+        };
+        //检测平台
+        var p = navigator.platform;
+        system.win = p.indexOf("Win") == 0;
+        if (system.win) {
+            //配置
+            var config = {
+                vx: 4,//点x轴速度,正为右，负为左
+                vy: 4,//点y轴速度
+                height: 2,//点高宽，其实为正方形，所以不宜太大
+                width: 2,
+                count: 200,//点个数
+                color: "248, 44, 68",//点颜色
+                stroke: "248, 44, 68",//线条颜色
+                dist: 6000,//点吸附距离
+                e_dist: 20000,//鼠标吸附加速距离
+                max_conn: 10//点到点最大连接数
+            }
+            //调用
+            CanvasParticle(config);
+        }
+
+        var ScreenWidth = $(document).width();
+        if( ScreenWidth <1280){
+            $('#i_right').css({"margin-right": "6%"});
+        }
+        else if( ScreenWidth >= 1280 &&  ScreenWidth <1400){
+            // $('.detailViewWrapper').css({"margin-left": ScreenWidth * 0.12});
+            $('#i_right').css({"margin-right": "11%"});
+        }
+        else if(ScreenWidth >=1400 &&  ScreenWidth <1500){
+            // $('.detailViewWrapper').css({"margin-left": ScreenWidth * 0.16});
+            $('#i_right').css({"margin-right": "16%"});
+        }else if(ScreenWidth > 1500) {
+            // $('.detailViewWrapper').css({"margin-left": ScreenWidth * 0.24});
+        }
+    });
+
+    /*$("#course_android").click(function(event) {
+		$("#dialog_show").click();
+        $("#dialog_details").html("课程仍在上传，请耐心等待");
+    });*/
+
+//    $("#course_ui").click(function(event) {
+//        $("#dialog_show").click();
+//        $("#dialog_details").html("课程仍在上传，请耐心等待");
+//    });
+
+	$("#course_h5").click(function(event) {
+		$("#dialog_show").click();
+        $("#dialog_details").html("课程仍在上传，请耐心等待");
+    });
+
+    $("#course_vr").click(function(event) {
+        $("#dialog_show").click();
+        $("#dialog_details").html("课程仍在上传，请耐心等待");
+    });
+
+	$("#course_ar").click(function(event) {
+		$("#dialog_show").click();
+        $("#dialog_details").html("课程仍在上传，请耐心等待");
+    });
+
+    $("#course_applet").click(function(event) {
+        $("#dialog_show").click();
+        $("#dialog_details").html("课程仍在上传，请耐心等待");
+    });
+</script>
+<script>
+$('#i_right ul li').hover(
+
+
+	function(){
+		$(this).find('.i_wechat').css({'display':'block'})
+	},
+	function(){
+		$(this).find('.i_wechat').css({'display':'none'})
+	}
+
+)
+</script>
+<script type="text/javascript">
+    $('.i_right_login a').click(function () {
+        var storage=window.localStorage;
+        var config=storage.getItem("token");
+        if(config!=null)
+        {
+            $.post("http://api.xueshenx.com/common/logout",{"token": config},function(data)
+            {
+                switch (data.resultData.code) {
+                    case 200:
+                        $('.i_right_login a').html("注册/登录");
+                        localStorage.removeItem('token');
+                        localStorage.removeItem('username');
+                        window.location.href = 'login.html';
+                        break;
+                    case 201:
+                        alert("退出登录失败");
+                        break;
+                }
+            });
+
+        }
+        else
+        {
+
+            window.location.href = 'login.html';
+        }
+    });
+</script>
+<script type="text/javascript" src="js/dialog-classie.js"></script>
+<script type="text/javascript" src="js/dialogFx.js"></script>
+<script type="text/javascript">
+    (function() {
+
+        var dlgtrigger = document.querySelector( '[data-dialog]' ),
+            somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+            dlg = new DialogFx( somedialog );
+
+        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+    })();
+</script>
+<!--&lt;!&ndash;粒子效果&ndash;&gt;-->
+<!--<script src="js/particles.js"></script>-->
+<!--<script src="js/app.js"></script>-->
+<script type="text/javascript" src="js/canvas-particle.js"></script>
+</body>
+</html>

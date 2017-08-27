@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+*,body,a,div,p,dl,dt,ol,li,ul,h2,h3
+{
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	text-align: left;
+	text-decoration: none;
+}

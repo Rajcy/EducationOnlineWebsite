@@ -1,0 +1,729 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+	<title>登录界面</title>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a9879340bce6ba1e335b6cb892285b82";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+	<style type="text/css">
+	*,body,a,div,p,dl,dt,ol,li,ul,h2,h3
+{
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	text-align: left;
+	text-decoration: none;
+	font-family: "微软雅黑";
+}
+.login_logo{float: left;
+		margin:2% 15% 0 15%;
+		}
+		.login-page {
+		  width: 360px;
+		  padding: 4% 0 0;
+		  margin: 2% 30% auto 60%;
+
+		}
+		.form,.form2 {
+		  position: relative;
+		  z-index: 1;
+		  background: #FFFFFF;
+		  max-width: 360px;
+		  margin: 0 auto 100px;
+		  padding: 35px;
+		  overflow:hidden;
+		  text-align: center;
+		  position:relative;
+		  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+		}
+		.form input,.form2 input {
+		  font-family: "Roboto", sans-serif;
+		  outline: 0;
+		  background: #f2f2f2;
+		  width: 100%;
+		  border: 0;
+		  margin: 0 0 15px;
+		  padding: 15px;
+		  box-sizing: border-box;
+		  font-size: 14px;
+		}
+		.form button,.form2 button {
+		  font-family: "Microsoft YaHei","Roboto", sans-serif;
+		  text-transform: uppercase;
+		  outline: 0;
+		  background: #4CAF50;
+		  width: 100%;
+		  border: 0;
+		  padding: 15px;
+		  color: #FFFFFF;
+		  font-size: 14px;
+		  text-align:center;
+		  -webkit-transition: all 0.5 ease;
+		  transition: all 0.5 ease;
+		  cursor: pointer;
+		}
+		.form button:hover,.form button:active,.form button:focus {
+		  background: #43A047;
+		}
+		.form .message,.form .message2 ,.form2 .message3{
+		  margin: 15px 0 0;
+		  color: #b3b3b3;
+		  font-size: 12px;
+		}
+		.form .message a,.form .message2 a,.form2 .message3 a{
+		  color: #4CAF50;
+		  text-decoration: none;
+		}
+		.form .register-form {
+		  display: none;
+		}
+		.container {
+		  position: relative;
+		  z-index: 1;
+		  max-width: 300px;
+		  margin: 0 auto;
+		}
+		.container:before, .container:after {
+		  content: "";
+		  display: block;
+		  clear: both;
+		}
+		.container .info {
+		  margin: 50px auto;
+		  text-align: center;
+		}
+		.container .info h1 {
+		  margin: 0 0 15px;
+		  padding: 0;
+		  font-size: 36px;
+		  font-weight: 300;
+		  color: #1a1a1a;
+		}
+		.container .info span {
+		  color: #4d4d4d;
+		  font-size: 12px;
+		}
+		.container .info span a {
+		  color: #000000;
+		  text-decoration: none;
+		}
+		.container .info span .fa {
+		  color: #EF3B3A;
+		}
+		.shake_effect{
+		 	-webkit-animation-name: shake;
+  			animation-name: shake;
+  			-webkit-animation-duration: 1s;
+  			animation-duration: 1s;
+		}
+	.msgs,.msgs2{display:inline-block;width:104px;color:#fff;font-size:12px;border:1px solid #0697DA;text-align:center;height:30px;line-height:30px;background:#0697DA;cursor:pointer;}
+	.form .msgs1,.form2 .msgs1{background:#EAEAEA;color:#002F09;}
+
+	.form button.msgs1:hover{background:#EAEAEA; cursor:none;}
+	.form2 button.msgs1:hover{background:#EAEAEA; cursor:none;}
+	.login_prompt2,.login_prompt3,.login_prompt4{ font-size:12px; color:#E73838; width:100%; margin-top:5px;}
+
+ 		@-webkit-keyframes shake {
+		  from, to {
+		    -webkit-transform: translate3d(0, 0, 0);
+		    transform: translate3d(0, 0, 0);
+		  }
+
+		  10%, 30%, 50%, 70%, 90% {
+		    -webkit-transform: translate3d(-10px, 0, 0);
+		    transform: translate3d(-10px, 0, 0);
+		  }
+
+		  20%, 40%, 60%, 80% {
+		    -webkit-transform: translate3d(10px, 0, 0);
+		    transform: translate3d(10px, 0, 0);
+		  }
+		}
+
+		@keyframes shake {
+		  from, to {
+		    -webkit-transform: translate3d(0, 0, 0);
+		    transform: translate3d(0, 0, 0);
+		  }
+
+		  10%, 30%, 50%, 70%, 90% {
+		    -webkit-transform: translate3d(-10px, 0, 0);
+		    transform: translate3d(-10px, 0, 0);
+		  }
+
+		  20%, 40%, 60%, 80% {
+		    -webkit-transform: translate3d(10px, 0, 0);
+		    transform: translate3d(10px, 0, 0);
+		  }
+		}
+		p.center{
+			color: #fff;font-family: "Microsoft YaHei";
+		}
+/* 底部link开始*/
+#login_link{
+	width: 100%;
+	height:120px;
+	float: left;
+	position: relative;
+	padding: 20px 0px;
+}
+.i_link_02{width:30%; height:50%;text-align:center; position:absolute; color:#000; top:20%; right:10px;}
+.login_link_01 {width:70%;margin:30px 80px 10px 10px;height:60px;text-align:center; font-size:12px;}
+/*.login_link_01 ul{width:100%;margin:0 auto;height:150px;text-align:center;}*/
+.login_link_01 ul li{ float:left; width:125px;text-align:center;  border-right:1px #494949 solid; }
+.login_link_01 ul li a{color:#494949;text-align:center;}
+.login_link_01 ul li a:hover{color:#036503;}
+.login_link_details01{text-align:center; margin:0 auto; width:100%;}
+.login_link_01 ul li.login_link_clear {float:left; width:125px;text-align:center;  border-right:none;}
+.login_link_details02{ width:60%;text-align:center; font-size:1.1em; margin:2% 4%;}
+.login_link_details02 .login_link_details03{width:120%;text-align:left;border-right:none;}
+.login_link_02{width:30%; height:50%;text-align:center; position:absolute; color:#494949; top:20%; right:10px; font-size:0.2em}
+.login_link_details04{ float:left;width:70%;text-align:left; margin:1% 4% ;color:#494949; font-size:12px;}
+/* 底部link结束*/
+
+/* 弹出框的样式*/
+    a, button {
+        color: #74716D;
+        text-decoration: none;
+        outline: none;
+        text-align: center;
+    }
+
+    button {
+        padding: 1em 2em;
+        outline: none;
+        font-weight: 600;
+        border: none;
+        color: #fff;
+        background: #43A047;
+
+    }
+
+    .button-wrap {
+        padding: 2.5em 0 0;
+        font-size: 1.25em;
+    }
+
+    button.trigger {
+        background: #43A047;
+        color: #fff;
+        border: none;
+    }
+    /* 弹出框的样式结束*/
+	</style>
+
+   <link rel="stylesheet" type="text/css" href="css/dialog-normalize.css" />
+
+    <!-- 公共对话框样式 -->
+    <link rel="stylesheet" type="text/css" href="css/dialog.css" />
+    <!-- css3弹出动画样式 -->
+    <link rel="stylesheet" type="text/css" href="css/dialog-sandra.css" />
+
+    <script type="text/javascript" src="js/dialog-modernizr.custom.js"></script>
+</head>
+
+<body>
+<div class="login_logo"><a href="index.html"><img src="images/logo.jpg" width="355" height="82"></a></div>
+<div class="htmleaf-container" style="height:auto; width:100%; float:left; background:url(images/login_back.png); background-repeat:no-repeat; background-size:cover;">
+		<div id="wrapper" class="login-page">
+		  <div id="login_form" class="form">
+		    <form class="register-form">
+            <h4 style="color:#6A6A6A;text-align:center; font-weight:100; font-size:24px; margin-bottom:5px;">注册</h4>
+		      <input type="text" placeholder="手机号码"  id="r_user_moblie" value="" maxlength="11" required/>
+		      <input type="text" placeholder="验证码" maxlength="6"  id="r_code1" style=" width:65%; float:left" required/>
+              <button type="button" id="r_code2" class="msgs"  style="float:left;width:35%;height:auto;line-height:110%;font-size:0.9em">验证码</button>
+              <input type="password" id="r_password" class="" maxlength="15"  placeholder="请输入6-15位密码"   required="required"/>
+		      <button id="create">立即注册</button>
+		      <p class="message">已经有了一个账户? <a href='javascript:;'>立刻登录</a></p>
+              <ul style="width:100%; float:left;"><p class="login_prompt3" ></p></ul>
+              <!--<p class="login_prompt3" style="font-size:12px;float:left; color:#E73838"></p>-->
+            </form>
+		    <form class="login-form">
+            <h4 style="color:#6A6A6A;text-align:center; font-weight:100; font-size:24px; margin-bottom:5px;">登录</h4>
+		      <input type="text" placeholder="手机号码" id="user_moblie"  maxlength="11" required/>
+		      <input type="password" placeholder="密码" maxlength="15"   id="password"  required="required"/>
+		      <button id="login">登　录</button>
+               <p class="message" style="float:left"><a href='javascript:;'>立刻注册</a></p>
+               <p class="message2" style="float:right"><a href='javascript:;'>找回密码</a></p>
+			   <ul style="width:100%; float:left;"><p class="login_prompt2" ></p></ul>
+              </form>
+
+  			</div>
+            <div id="login_form" class="form2" style="display:none;">
+             <form class="find-form" style="margin-left: -500px;background: rgb(255, 255, 255); max-width: 360px;height:300px; ">
+		      <h4 style="color:#6A6A6A;text-align:center; font-weight:100; font-size:24px; margin-bottom:5px;">密码修改</h4>
+              <input type="text" placeholder="手机号码"  id="find_user_moblie" value=""  maxlength="11"  required="required"/>
+              <input type="text" placeholder="验证码" maxlength="6"  id="r_code4" style=" width:65%; float:left"  required="required"/>
+              <button type="button" id="r_code3" class="msgs2" style="float:left;width:35%;height:auto;line-height:110%;font-size:0.9em">验证码</button>
+              <input type="password" placeholder="密码更改" id="find_password" maxlength="15"  required="required" />
+		      <button id="find" style="font-size: 14px;">确认</button>
+             <p class="message3">已经有了一个账户? <a href='javascript:;'>返回登录</a></p>
+              <ul style="width:100%; float:left;"><p class="login_prompt4" ></p></ul>
+             </form>
+             </div>
+	</div>
+   </div>
+
+   <div id="login_link">
+    	<div class="login_link_01">
+        	<ul class="login_link_details01">
+            	<li ><a href="relations.html">关于我们</a></li>
+                <li ><a href="contact.html">联系我们</a></li>
+                <li ><a href="javascript:;">版权所有</a></li>
+                <li ><a href="javascript:;">法律声明</a></li>
+                <li class="i_link_clear"><a href="javascript:;">投诉与建议</a></li>
+                <br>
+            </ul>
+            <ul class="login_link_details02">
+                <li class="login_link_details03"><a>技术支持: 277064007@qq.com</a></li>
+				 <li class="login_link_details03"><a>联系电话: 010-62530023</a></li>
+                <li class="login_link_details03"><a>地    址: 广州市天河区珠江新城珠江东路30号广州银行大厦11层</a></li>
+            </ul>
+        </div>
+
+        <div class="login_link_details04">东方标准X版权所有	@2016</div>
+        <div class="i_link_02"><img src="images/i_wechat01.png" width="120px" height="120px"/><br>扫一扫二维码关注微信服务号</div>
+
+    </div>
+
+<!----------弹窗设置-------------->
+    <button id="dialog_show" data-dialog="somedialog" class="trigger" style="display:none"></button>
+    <div id="somedialog" class="dialog" style=" z-index: 2;">
+    <div class="dialog__overlay"></div>
+    <div class="dialog__content" >
+       <h2 id="dialog_details" style="text-align: center;"><strong ></strong>></h2><div style="text-align: center;"><button class="action dialogbutton" id="login_sure" data-dialog-close>确定</button></div>
+    </div>
+	</div>
+
+
+    <script>document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script type="text/javascript" src="js/code.js"></script>
+	<script type="text/javascript">
+	<!--登陆-->
+	function check_login()
+	{
+	 	var phone = $("#user_moblie").val();
+		var pwd = $("#password").val();
+		var reg_pwd=/^[a-zA-Z0-9]{6,15}$/;
+		var reg2_phone=/^1\d{10}$/;
+		$('.login_prompt2').html("");
+	 	if(reg2_phone.test(phone)==true && reg_pwd.test(pwd)==true)
+		 {
+			$.post("http://api.xueshenx.com/common/login",{phone: phone,password: pwd},function(data)
+		 	{
+				//console.dir(data);
+
+				switch (data.resultData.code) {
+					case 200:
+						$("#dialog_show").click();
+                        $("#dialog_details").html("登录成功");
+                        $("#login_sure").click(function  () {
+                            window.location.href = 'index.html';
+                            var storage=window.localStorage;
+                            storage.setItem("token",data.resultData.token);
+                            storage.setItem("username",data.resultData.username);
+                            storage.setItem("isvip",data.resultData.is_vip);
+                            storage.setItem("viptime",data.resultData.time);
+
+
+                        })
+						 $(".dialog__overlay").click(function () {
+                            window.location.href = 'index.html';
+							var storage=window.localStorage;
+                            storage.setItem("token",data.resultData.token);
+                            storage.setItem("username",data.resultData.username);
+                            storage.setItem("isvip",data.resultData.is_vip);
+                            storage.setItem("viptime",data.resultData.time);
+                        })
+						break;
+
+
+					case 201:
+
+						$('.login_prompt2').append("*手机或密码格式不正确!");
+
+						break;
+
+					case 202:
+
+						$('.login_prompt2').append("*账号不存在!");
+
+						break;
+
+					case 203:
+
+						$('.login_prompt2').append("*密码错误!");
+						break;
+
+
+				}
+			});
+
+		 }
+	 else
+	 {
+	  var inform=$(".login_prompt2");
+	  if(reg2_phone.test(phone)!=true ){
+	  	inform.html("*手机号码格式不正确，请重新输入！")
+	  }
+	  else(
+	  	inform.html("*密码不正确，请输入以6-15个字母或数字")
+	  )
+	  $("#login_form").removeClass('shake_effect');
+	  setTimeout(function()
+	  {
+	   $("#login_form").addClass('shake_effect')
+	  },1);
+	 }
+	}
+
+
+
+
+
+//获取注册短信验证码
+$(function() {
+	//var validCode=true;
+	$(".msgs").click (function  () {
+		var time=60;
+		var code=$(this);
+		$('.login_prompt3').html("");
+		//if($('.login_prompt3').html()!=""){}
+		var passcodl=$('#r_user_moblie').val();
+		var url = "http://api.xueshenx.com/common/sms?phone="+passcodl+"&type=register";
+		$.get(url,function (data) {
+			switch (data.resultData.code) {
+				case 200:
+
+					$('.login_prompt3').append("*发送短信成功");
+					 code.addClass("msgs1");
+			         code.attr("disabled",true);
+
+					var t=setInterval(function  () {
+			        time--;
+			        code.html(time+"秒");
+			        if (time==0) {
+				       clearInterval(t);
+			           code.html("重新获取");
+				       //validCode=true;
+					  code.removeClass("msgs1");
+			          code.attr("disabled",false);
+			         }
+		              },1000);
+					break;
+
+				case 201:
+
+					$('.login_prompt3').append("*发送短信失败");
+
+					break;
+
+				case 202:
+
+					$('.login_prompt3').append("*请勿重复发送短信");
+
+					break;
+
+				case 1000:
+
+					$('.login_prompt3').append("*请填写手机号！");
+
+					break;
+
+				case 1001:
+
+					$('.login_prompt3').append("*手机已经注册");
+
+					break;
+				case 1002:
+
+					$('.login_prompt3').append("*手机没有注册");
+
+					break;
+				case 1003:
+
+					$('.login_prompt3').append("*手机验证码错误");
+
+					break;
+
+			}
+		});
+
+	})
+})
+<!--	注册-->
+	function check_register(){
+		var phone = $("#r_user_moblie").val();
+		var pwd = $("#r_password").val();
+		var yzm=$("#r_code1").val();
+		var reg_pwd=/^[a-zA-Z0-9]{6,15}$/;
+		var reg2_phone=/^1\d{10}$/;
+		var reg3_yzm=/^[0-9][0-9][0-9][0-9][0-9][0-9]$/;
+		$('.login_prompt3').html("");
+		if(reg2_phone.test(phone)==true &&  reg_pwd.test(pwd)==true&& reg3_yzm.test(yzm)==true)
+		 {
+
+		  	$.post("http://api.xueshenx.com/common/register",{phone: phone,password: pwd, code: yzm},function(data)
+		 		{
+				//console.log(data);
+				switch (data.resultData.code) {
+					case 200:
+						$("#dialog_show").click();
+                        $("#dialog_details").html("注册成功");
+                        $("#login_sure").click(function  () {
+                            window.location.href = 'login.html';
+                        })
+
+                        $(".dialog__overlay").click(function () {
+                            window.location.href = 'login.html';
+                        })
+						break;
+
+					case 201:
+
+						$('.login_prompt3').append("*网络故障");
+
+						break;
+
+					case 1000:
+
+						$('.login_prompt3').append("*参数错误");
+
+						break;
+
+					case 1001:
+
+						$('.login_prompt3').append("*手机已经注册!");
+
+						break;
+
+					case 1002:
+
+						$('.login_prompt3').append("*验证码错误!");
+						break;
+
+			}
+			});
+
+		 }
+
+	else
+	 {
+	  var inform=$(".login_prompt3");
+	  if(reg2_phone.test(phone)!=true ){
+	  	inform.html("*手机号码格式不正确，请重新输入！")
+	  }
+	  else(
+
+		  inform.html("*密码不正确！/验证码不正确！")
+	  )
+	  $("#login_form").removeClass('shake_effect');
+	  setTimeout(function()
+	  {
+	   $("#login_form").addClass('shake_effect')
+	  },1);
+	 }
+	}
+
+
+//点击时触发的事件
+	$(function(){
+		$("#create").click(function(){
+			check_register();
+			return false;
+		})
+		$("#login").click(function(){
+			check_login();
+			return false;
+		})
+		$("#find").click(function(){
+			find_register();
+			return false;
+		})
+		$('.message a').click(function () {
+		    $('form').animate({
+		        height: 'toggle',
+		        opacity: 'toggle'
+		    }, 'slow');
+		})
+		$('.message2 a').click(function(){
+			$('.form').css({'display':'none'},100);
+			$('.form2').css({'display':'block'},100);
+			$('.find-form').animate({'margin-left':'0'},500);
+		})
+		$('.message3 a').click(function(){
+			$('.form').css({'display':'block'},100);
+			$('.form2').css({'display':'none'},100);
+			$('.find-form').animate({'margin-left':'-500px'},500);
+		});
+
+	})
+
+
+	<!--重新修改注册-->
+	function find_register(){
+		var phone = $("#find_user_moblie").val();
+		var pwd = $("#find_password").val();
+		var yzm=$("#r_code4").val();
+		var reg_pwd=/^[a-zA-Z0-9]{6,15}$/;
+		var reg2_phone=/^1\d{10}$/;
+		var reg3_yzm=/^[0-9][0-9][0-9][0-9][0-9][0-9]$/;
+		$('.login_prompt4').html("");
+		if(reg2_phone.test(phone)==true &&  reg_pwd.test(pwd)==true&& reg3_yzm.test(yzm)==true)
+		 {
+
+		  	$.post("http://api.xueshenx.com/common/reset",{phone: phone,password: pwd, code: yzm},function(data)
+		 		{
+				switch (data.resultData.code) {
+					case 200:
+                        $("#dialog_show").click();
+                        $("#dialog_details").html("修改成功");
+                        $("#login_sure").click(function  () {
+                            window.location.href = 'login.html';
+                        })
+
+                        $(".dialog__overlay").click(function () {
+                            window.location.href = 'login.html';
+                        })
+						break;
+
+					case 201:
+
+						$('.login_prompt4').append("*网络故障");
+
+						break;
+
+					case 1000:
+
+						$('.login_prompt4').append("*参数错误");
+
+						break;
+
+					case 1001:
+
+						$('.login_prompt4').append("*验证码错误!");
+
+						break;
+
+
+
+			}
+			});
+
+		 }
+		 else
+	 {
+	  var inform=$(".login_prompt4");
+	  if(reg2_phone.test(phone)!=true ){
+	  	inform.html("*手机号码格式不正确，请重新输入！")
+	  }
+	  else(
+	  	inform.html("*密码不正确，请输入以6-15个字母或数字")
+	  )
+	  $("#login_form").removeClass('shake_effect');
+	  setTimeout(function()
+	  {
+	   $("#login_form").addClass('shake_effect')
+	  },1);
+	 }
+	}
+
+
+	//获取修改——短信验证码
+$(function() {
+	var validCode=true;
+	$(".msgs2").click (function  () {
+		$('.login_prompt4').html("");
+		var time=60;
+		var code=$(this);
+		var passcodl=$('#find_user_moblie').val();
+		var url = "http://api.xueshenx.com/common/sms?phone="+passcodl+"&type=reset";
+		$.get(url,function (data) {
+			switch (data.resultData.code) {
+				case 200:
+					$('.login_prompt4').append("*发送短信成功");
+					 code.addClass("msgs1");
+			         code.attr("disabled",true);
+
+					var t=setInterval(function  () {
+			        time--;
+			        code.html(time+"秒");
+			        if (time==0) {
+				      clearInterval(t);
+					  code.attr("disabled",false);
+			          code.html("重新获取");
+					  code.removeClass("msgs1");
+
+			         }
+		              },1000);
+					break;
+
+
+
+				case 201:
+
+					$('.login_prompt4').append("*发送短信失败");
+
+					break;
+
+				case 202:
+
+					$('.login_prompt4').append("*请勿重复发送短信");
+
+					break;
+
+				case 1000:
+
+					$('.login_prompt4').append("*请填写手机号！");
+
+					break;
+
+				case 1001:
+
+					$('.login_prompt4').append("*手机已经注册");
+
+					break;
+				case 1002:
+
+					$('.login_prompt4').append("*手机没有注册");
+
+					break;
+				case 1003:
+
+					$('.login_prompt4').append("*手机验证码错误");
+
+					break;
+
+			}
+		});
+	})
+})
+
+
+
+	</script>
+<script type="text/javascript" src="js/dialog-classie.js"></script>
+<script type="text/javascript" src="js/dialogFx.js"></script>
+<script type="text/javascript">
+    (function() {
+
+        var dlgtrigger = document.querySelector( '[data-dialog]' ),
+            somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+            dlg = new DialogFx( somedialog );
+
+        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+    })();
+</script>
+</body>
+</html>

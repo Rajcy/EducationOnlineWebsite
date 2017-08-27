@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+<head>
+<meta name="keywords" content="高薪,Java,黑科技,IT,最权威,全国第一,世界第一,最专业的,最完整,UI,AR,VR,AI">
+<meta charset="utf-8">
+<title>东方标准X</title>
+<meta name="keywords" content="极酷阳光V3.5播放器简单列表功能(列表功能)演示" />
+<meta name="description" content="极酷阳光V3.5播放器简单列表功能" />
+<!-- <meta name="viewport" content="width=device-width, />-->
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="css/dialog-normalize.css" />
+<!-- 公共对话框样式 -->
+<link rel="stylesheet" type="text/css" href="css/dialog.css" />
+<!-- css3弹出动画样式 -->
+<link rel="stylesheet" type="text/css" href="css/dialog-sandra.css" />
+<script type="text/javascript" src="js/dialog-modernizr.custom.js"></script>
+<style type="text/css">
+<!--
+/* myplayer */
+div#myplayer { width:1024px;margin:0 auto; border:1px #cccccc solid; clear:both;  background:#565656; clear:both; height:455px;}
+div#CuPlayer { width:730px; float:left;margin-left:0px;margin-top:0px;}
+div.list { width:270px;float:right;margin-top:10px; }
+div.list dl img{ width:70px;height:50px; float:left; display:none;}
+div.list dl strong { display:block; width:190px;float:left; padding-left:15px; font-weight:normal; font-size:16px}
+div.list dl span { display:block; width:190px;float:left; padding-left:15px;}
+div.list dl dt { width:270px;float:left; }
+div.list dl dt a { display:block; line-height:18px;padding-top:10px;  border-bottom:1px #595959 solid;
+ height:60px; padding-top:10px; color:#333; font-size:12px; text-decoration:none; }
+div.list dl dt a:hover{  height:60px; padding-top:10px;  text-decoration:none; background:#efefef; }
+.blank { clear:both; height:20px; }
+div.help { line-height:32px; font-size:14px; clear:both; width:995px;margin:0 auto; font-family:"Microsoft YaHei","微软雅黑","Microsoft JhengHei",MingLiu,Verdana, Arial, Helvetica, sans-serif,"宋体"; }
+h1 { border-bottom:1px #cccccc solid; line-height:58px;}
+.video { OVERFLOW: hidden; WIDTH: 100%; POSITION: relative}
+.close_light_bg {DISPLAY: none; BACKGROUND: #000; FILTER: alpha(opacity = 95); LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px; HEIGHT: 100%; opacity: .95}
+.list{
+   height:440px;
+   width:280px;
+   overflow-x:hidden;
+
+　  scrollbar-base-color:#333333;/*滚动条的基本颜色*/
+　  }　　
+-->
+</style>
+<!--百度统计-->
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a9879340bce6ba1e335b6cb892285b82";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript" language="javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="player/js/swfobject.js"></script>
+<script type="text/javascript" src="player/js/action.js" ></script>
+</head>
+<body>
+<div class="i_main">
+	<div id="i_right">
+	<ul>
+    	<!--<li>手机APP</li>-->
+        <li class="i_right_position">微信<div class="i_wechat" style="position:absolute; width:284px;height:212px; left:-80px; top:60px; display:none; z-index:6; background:url(player/images/i_wechat.png) no-repeat"></div></li>
+        <li class="i_right_position">微博<div class="i_wechat" style="position:absolute; width:200px;height:212px; left:-80px; top:60px; display:none; z-index:6; background:url(player/images/weibo.png) no-repeat;background-size:cover"></div></li>
+        <li class="i_right_position">QQ<div class="i_wechat" style="position:absolute; width:200px;height:212px; left:-80px; top:60px; display:none; z-index:6; background:url(player/images/qq.png) no-repeat;background-size:cover"></div></li>
+        <li class="i_right_login"><a href="javascript:;">注册/登录</a></li>
+    </ul>
+	</div>
+
+    <div id="i_menu">
+	<div id="i_menu_left"><a href="index.html"><img src="images/logo.jpg"></a></div>
+	<div id="i_menu_right" style="margin-left:320px;line-height:80px; color:#FFF">
+	<ul>
+    	<li><a href="index.html">首页</a></li>
+        <li><a href="course.html">精品课程</a></li>
+        <li><a href="teachers.html">师资力量</a></li>
+        <li><a href="jobinform.html">招聘信息</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+        <li><a href="relations.html">投资关系</a></li>
+        <li><a href="materials.html">学习资料</a></li>
+    </ul>
+	</div>
+	</div>
+</div><!--i_main结束-->
+<div style="width:100%; height:auto; float:left; background:#EAEAEA">
+<div class="close_light_bg" id="close_light_bg"></div>
+
+<div class="blank"></div>
+<!--myplayer/begin-->
+<div id="myplayer">
+<!--极酷阳光V3.5免费版 代码开始-->
+<div id="CuPlayer"  class="video" > <strong>提示：您的Flash Player版本过低，请<a href="http://www.cuplayer.com/CuPlayer/" >点此进行播放器升级</a>！</strong> </div>
+<div class="list"  >
+  <dl>
+  <dt><a href="#" onclick="changeStream(0);"><strong>1吉利集团宣传</strong><span>发布日期：2015.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(1);"><strong>2吉利博瑞牙克石冰雪测试</strong><span>发布日期：2015.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(2);"><strong>3全新帝豪概念车隆重发布</strong><span>发布日期：2015.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(3);"><strong>4吉利集团宣传片</strong><span>发布日期：2015.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(4);"><strong>5吉利博瑞产品篇</strong><span>发布日期：2015.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(5);"><strong>6全新帝豪概念车隆重发布</strong><span>发布日期：2015.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(6);"><strong>7吉利博瑞牙克石冰雪测试</strong><span>发布日期：2015.03.25</span></a></dt>
+  </dl>
+   <dl>
+  <dt><a href="#" onclick="changeStream(7);"><strong>8吉利博瑞产品篇</strong><span>发布日期：2015.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(8);"><strong>9全新帝豪概念车隆重发布</strong><span>发布日期：2015.03.25</span></a></dt>
+  </dl>
+  <dl>
+  <dt><a href="#" onclick="changeStream(9);"><strong>10吉利博瑞牙克石冰雪测试</strong><span>发布日期：2015.03.25</span></a></dt>
+  </dl>
+</div>
+
+<script type=text/javascript>
+<!--
+//极酷阳光V3.5免费版：官方连播代码示例20160519//
+var CuPlayerList ="http://olm3zb2gw.bkt.clouddn.com/java/1/1/java-1-1-1.mp4|http://olm3zb2gw.bkt.clouddn.com/java/1/1/java-1-1-1.mp4|http://olm3zb2gw.bkt.clouddn.com/java/1/1/java-1-1-1.mp4|http://olm3zb2gw.bkt.clouddn.com/java/1/1/java-1-1-1.mp4|http://olm3zb2gw.bkt.clouddn.com/java/1/1/java-1-1-1.mp4|http://olm3zb2gw.bkt.clouddn.com/java/1/1/java-1-1-1.mp4|http://olm3zb2gw.bkt.clouddn.com/java/1/1/java-1-1-1.mp4|http://olm3zb2gw.bkt.clouddn.com/java/1/1/java-1-1-1.mp4|http://olm3zb2gw.bkt.clouddn.com/java/1/1/java-1-1-1.mp4|http://olm3zb2gw.bkt.clouddn.com/java/1/1/java-1-1-1.mp4"
+var sp =CuPlayerList.split("|")
+var num = sp.length;
+var video_index = 0;
+function getNext(pars)
+{
+  if(video_index < num-1)
+	{
+		video_index++;
+		so.addVariable("JcScpVideoPath",sp[video_index]);
+		so.addVariable("JcScpAutoPlay","yes"); //是否自动播放
+		so.write("CuPlayer");
+	}
+	else
+	{
+	video_index = 0;
+	so.addVariable("CuPlayerFile",sp[video_index]);
+	so.write("CuPlayer");
+	}
+	$(".list dl dt a").css("background","#191919").css("color","#ffffff");
+	$(".list dl dt a").eq(video_index).css("background","#343434").css("color","#ffffff");
+	LeftScr(video_index);
+}
+function changeStream(CuPlayerFile){
+$(".list dl dt a").css("background","#191919").css("color","#ffffff");
+$(".list dl dt a:hover").css("background","#343434").css("color","#ffffff");
+LeftScr(CuPlayerFile);
+video_index = CuPlayerFile;
+so.addVariable("JcScpVideoPath",sp[CuPlayerFile]);
+so.addVariable("JcScpAutoPlay","yes"); //是否自动播放
+so.write("CuPlayer");
+return false;
+}
+CuPlayerFile =sp[video_index];
+$(".list dl dt a").css("background","#191919").css("color","#ffffff");
+$(".list dl dt a").eq(video_index).css("background","#343434").css("color","#ffffff");
+var so = new SWFObject("player/player.swf","ply","730","455","9","#000000");
+so.addParam("allowfullscreen","true");
+so.addParam("allowscriptaccess","always");
+so.addParam("wmode","opaque");
+so.addParam("quality","high");
+so.addParam("salign","lt");
+so.addVariable("JcScpFile","player/CuSunV4setNext.xml"); //* 必须存在/播放器配置文件地址
+so.addVariable("JcScpVideoPath",CuPlayerFile);
+so.addVariable("JcScpImg","player/images/startpic.jpg");
+so.addVariable("JcScpAutoPlay","yes"); //是否自动播放
+so.write("CuPlayer");
+
+function LeftScr(m){
+	var scrtop;
+	if(m>1){
+	scrtop=55*(m-1);
+	}else{
+		scrtop=0;
+		}
+	$(".list").animate({
+		scrollTop:scrtop
+		},130);
+
+	}
+//-->
+</script>
+<!--极酷阳光V3.5免费版 代码结束-->
+</div>
+<!--myplayer/end-->
+
+<div style="display:none;">
+<script type="text/javascript" src="http://www.cuplayer.com/CuPlayer/js/stat.js"></script>
+</div>
+</div>
+
+<!--轮播结束-->
+
+	<div id="i_fine">
+    <br><br><br>
+		<div class="i_reason_title">热门科目<div class="i_fine_subhead">以学员满意度为本</div></div>
+        <div class="i_fine_icon">
+        	<ul>
+        		<li class="item-1">
+            	<a href="course.html" target="_blank">
+                <div class="i_fine_iconimg"><img src="images/javaicon.png" width="70px" height="70px" style="margin:0 auto"></div>
+                <h3>Java</h3>
+                <div class="into"><div class="btn-into">进入科目</div></div>
+           		</a>
+        		</li>
+
+                <li class="item-2">
+            	<a href="course.html" target="_blank">
+                <div class="i_fine_iconimg"><img src="images/swifticon.png" width="70px" height="70px" style="margin:0 auto"></div>
+                <h3>swift开发</h3>
+                <div class="into"><div class="btn-into">进入科目</div></div>
+           		</a>
+        		</li>
+
+        		<li class="item-3">
+            	<a href="course.html" target="_blank">
+                <div class="i_fine_iconimg"><img src="images/andriodicon.png" width="70px" height="70px" style="margin:0 auto"></div>
+                <h3>Andriod开发</h3>
+                <div class="into"><div class="btn-into">进入科目</div></div>
+           		</a>
+        		</li>
+
+                <li class="item-4">
+            	<a href="course.html" target="_blank">
+                <div class="i_fine_iconimg"><img src="images/VRicon.png" width="70px" height="70px" style="margin:0 auto"></div>
+                <h3>虚拟现实技术</h3>
+                <div class="into"><div class="btn-into">进入科目</div></div>
+           		</a>
+        		</li>
+               <li class="item-5">
+            	<a href="course.html" target="_blank">
+                <div class="i_fine_iconimg"><img src="images/h5icon.png" width="70px" height="70px" style="margin:0 auto"></div>
+                <h3>H5</h3>
+                <div class="into"><div class="btn-into">进入科目</div></div>
+           		</a>
+        		</li>
+
+                <li class="item-6">
+            	<a href="course.html" target="_blank">
+                <div class="i_fine_iconimg"><img src="images/uiicon.png" width="70px" height="70px" style="margin:0 auto"></div>
+                <h3>UI设计</h3>
+                <div class="into"><div class="btn-into">进入科目</div></div>
+           		</a>
+        		</li>
+
+        		<li class="item-7">
+            	<a href="course.html" target="_blank">
+                <div class="i_fine_iconimg"><img src="images/Front-endicon.png" width="70px" height="70px" style="margin:0 auto"></div>
+                <h3>后端开发</h3>
+                <div class="into"><div class="btn-into">进入科目</div></div>
+           		</a>
+        		</li>
+
+                <li class="item-8">
+            	<a href="course.html" target="_blank">
+                <div class="i_fine_iconimg"><img src="images/weichaticon.png" width="70px" height="70px" style="margin:0 auto"></div>
+                <h3>微信小程序</h3>
+                <div class="into"><div class="btn-into">进入科目</div></div>
+           		</a>
+        		</li>
+
+                <li class="item-9">
+            	<a href="course.html" target="_blank">
+                <div class="i_fine_iconimg"><img src="images/playicon.png" width="70px" height="70px" style="margin:0 auto"></div>
+                <h3>游戏动画</h3>
+                <div class="into"><div class="btn-into">进入科目</div></div>
+           		</a>
+        		</li>
+
+                <li class="item-10">
+            	<a href="course.html" target="_blank">
+                <div class="i_fine_iconimg"><img src="images/Videoicon.png" width="70px" height="70px" style="margin:0 auto"></div>
+                <h3>影视后期</h3>
+                <div class="into"><div class="btn-into">进入科目</div></div>
+           		</a>
+        		</li>
+
+               <li class="item-11">
+            	<a href="course.html" target="_blank">
+                <div class="i_fine_iconimg"><img src="images/psicon.png" width="70px" height="70px" style="margin:0 auto"></div>
+                <h3>平面设计</h3>
+                <div class="into"><div class="btn-into">进入科目</div></div>
+           		</a>
+        		</li>
+
+                <li class="item-12">
+            	<a href="course.html" target="_blank">
+                <div class="i_fine_iconimg"><img src="images/viicon.png" width="70px" height="70px" style="margin:0 auto"></div>
+                <h3>企业VI视觉设计</h3>
+                <div class="into"><div class="btn-into">进入科目</div></div>
+           		</a>
+        		</li>
+
+
+        	</ul>
+
+        </div>
+
+	</div> <!-- i_fine结束 -->
+
+
+    <div id="i_teacher">
+    <div class="i_teacher_title">东方面授课
+        <div class="i_fine_subhead">以学员满意度为本</div>
+    </div>
+    <div class="i_teacher_show">
+        <ul>
+            <li>
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                    <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                        <span class="wistia_embed wistia_async_uxd7lhsfbb popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;width:225px; height:136px;">&nbsp;</span>
+                    </div>
+                </div>
+                <br>Swift语言简介
+            </li>
+            <li>
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative; ">
+                    <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                        <span class="wistia_embed wistia_async_u9yy5nuapn popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;width:225px; height:136px;">&nbsp;</span>
+                    </div>
+                </div>
+                <br>Swift-语言基础讲座
+            </li>
+            <li>
+               <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                    <div class="wistia_responsive_wrapper"
+                         style="height:100%;left:0;position:absolute;top:0;width:100%;"><span
+                        class="wistia_embed wistia_async_ttwfs5wmf8 popover=true popoverAnimateThumbnail=true videoFoam=true"
+                        style="display:inline-block;width:225px; height:136px;">&nbsp;</span></div>
+                </div>
+                <br>Swift语言开发速成—超级玛丽
+            </li>
+            <li>
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                    <div class="wistia_responsive_wrapper"
+                         style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                        <span
+                            class="wistia_embed wistia_async_pjfnjz4qmy popover=true popoverAnimateThumbnail=true videoFoam=true"
+                            style="display:inline-block;width:225px; height:136px;">&nbsp;</span>
+                    </div>
+                </div>
+                <br>Android开发-项目架构介绍
+            </li>
+            <li>
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                    <div class="wistia_responsive_wrapper"
+                         style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                        <span
+                            class="wistia_embed wistia_async_8zj5qux4d7 popover=true popoverAnimateThumbnail=true videoFoam=true"
+                            style="display:inline-block;width:225px; height:136px;">&nbsp;</span>
+                    </div>
+                </div>
+                <br>Swift语言游戏实战—破气球
+            </li>
+            <li>
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                    <div class="wistia_responsive_wrapper"
+                         style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                        <span
+                            class="wistia_embed wistia_async_wfmpkggtr9 popover=true popoverAnimateThumbnail=true videoFoam=true"
+                            style="display:inline-block;width:225px; height:136px;">&nbsp;</span>
+                    </div>
+                </div>
+                <br>Swift语言游戏实战—飞扬的小鸟Flappy Bird
+            </li>
+            <li>
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative; ">
+                    <div  class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                        <span  class="wistia_embed wistia_async_2qdvdnj4gl popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;width:225px; height:136px; ">&nbsp;</span>
+                    </div>
+                </div>
+                <br>Java 发展历史
+            </li>
+            <li>
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                    <div class="wistia_responsive_wrapper"
+                         style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                        <span
+                            class="wistia_embed wistia_async_c12ek5jm75 popover=true popoverAnimateThumbnail=true videoFoam=true"
+                            style="display:inline-block;width:225px; height:136px;">&nbsp;</span>
+                    </div>
+                </div>
+                <br>Sketch UI开发简介
+            </li>
+        </ul>
+    </div>
+</div>
+<!--课程-->
+
+
+
+
+
+
+
+    <div id="i_leasson">
+    <br>
+    <br>
+    <br>
+		<div class="i_reason_title">东方面授课<div class="i_fine_subhead">以学员满意度为本</div></div>
+		<div class="lanren">
+			<ul>
+				<li><img src="images/class1.jpg" style="width:240px; height:146px;"/><div class="txt"><h3>李能子& 职位:教学总监</h3><p>广东开源软件促进协会首席专家，7+年IT开发经验；资深移动互联网技术大咖，精通java开源技术、SSM、SSH开发框架等多个领域,多年超大型项目管理和资深架构经验。 </p></div></li>
+				<li><img src="images/class2.jpg" style="width:240px; height:146px;"/><div class="txt"><h3>丁剑& 职位:Java讲师 </h3><p>毕业于华中科技大学，6年+java开发工作经验，曾就职于武汉朗威科技技术有限公司；多年实战项目经验，参与昆明药小二项目开发等国内多个大型项目</p></div></li>
+       			<li><img src="images/class3.jpg" style="width:240px; height:146px;"/><div class="txt"><h3>陈焯豪& 职位:Java讲师</h3><p>深度技术宅，喜欢研究和玩转各种新技术；丰富的商业项目开发经验，精通多种开源技术和数据库技术，包括JavaSE、Android、Oracle、MySQL等等</p></div></li>
+				<li><img src="images/class4.jpg" style="width:240px; height:146px;"/><div class="txt"><h3>王健志& 职位:Java讲师学</h3><p>英国莱斯特大学计算机专业硕士，多年名企从业经历，精通Java、.Ne框架、大数据研发等领域；拥有多个大型项目经验，曾参与普华永道大数据研发等等大型功能开发及维护项目</p></div></li>
+				<br>
+
+                <li><img src="images/class5.jpg" style="width:240px; height:146px;"/><div class="txt"><h3>边力& 职位:高级设计总监</h3><p>网易前GUI设计总监，10年+动画游戏项目设计经验，参与网易大话系列游戏、腾讯大型网游开发制作，曾担任大型制作项目《漫游中国》、《七星女》的美术设计。</p></div></li>
+				<li><img src="images/class6.jpg" style="width:240px; height:146px;"/><div class="txt"><h3>宋为民& 职位:金牌设计师</h3><p>国家级高级UI设计师，10年+美术视觉设计项目经验；5年海外设计经历，东亚首席高级UI设计师、德国交互界面金牌设计，熟悉UI技术各领域，对框架研发及设计见解独到。</p></div></li>
+       			<li><img src="images/class7.jpg" style="width:240px; height:146px;"/><div class="txt"><h3>吴海坤& 职位:高级设计师</h3><p>前网易游戏UI高级设计师，8年+视觉设计项目经验；省级高级视觉设计师，荣获广东省视觉设计大赛优秀设计师称号，丰富的游戏界面设计项目经验。</p></div></li>
+				<li><img src="images/class8.jpg" style="width:240px; height:146px;"/><div class="txt"><h3>陈泽兰& 职位:高级UI讲师</h3><p>高级UI设计师，华南师范大学美术学院企业专家顾问，10年+手机APP设计项目经验，丰富的框架研发和设计经历。</p></div></li>
+			</ul>
+		</div>
+    </div>
+ <!--i_main结束-->
+
+
+
+
+
+
+	<div id="i_judge">
+    	<img id="i_judge_pic" src="images/botBanner.gif" width="100%" height="auto" >
+    </div>
+	<div class="i_link">
+    	<div class="i_link_01">
+        	<ul class="i_link_details01">
+            	<li ><a href="relations.html">关于我们</a></li>
+                <li ><a href="contact.html">联系我们</a></li>
+                <li ><a href="javascript:;">版权所有</a></li>
+                <li ><a href="javascript:;">法律声明</a></li>
+                <li class="i_link_clear"><a href="javascript:;">投诉与建议</a></li>
+                <br>
+            </ul>
+            <ul class="i_link_details02">
+                <li class="i_link_details03"><a>技术支持: 277064007@qq.com</a></li>
+				 <li class="i_link_details03"><a>联系电话: 010-62530023</a></li>
+                <li class="i_link_details03"><a>地    址: 广州市天河区珠江新城珠江东路30号广州银行大厦11层</a></li>
+            </ul>
+        </div>
+
+        <div class="i_link_details04">东方标准X版权所有	@2016</div>
+        <div class="i_link_02"><img src="images/i_wechat01.png" width="120px" height="120px"/><br>扫一扫二维码关注微信服务号</div>
+    </div>
+
+
+
+<!----------弹窗设置-------------->
+    <button id="dialog_show" data-dialog="somedialog" class="trigger" style="display:none"></button>
+    <div id="somedialog" class="dialog" style=" z-index: 10;">
+    <div class="dialog__overlay"></div>
+    <div class="dialog__content" >
+        <h2 id="dialog_details" style="text-align: center;"><strong ></strong>></h2><div style="text-align: center;"><button class="action dialogbutton" id="login_sure" data-dialog-close>确定</button></div>
+    </div>
+	</div>
+<!--这里是触摸时-->
+
+
+<script>
+$(".lanren ul li").hover(function(){
+	$(this).find(".txt").stop().animate({height:"150px"},400);
+	$(this).find(".txt h3").stop().animate({paddingTop:"60px"},400);
+	$(this).find(".txt h3").stop().css({'text-decoration':'underline'});
+},function(){
+	$(this).find(".txt").stop().animate({height:"35px"},400);
+	$(this).find(".txt h3").stop().animate({paddingTop:"0px"},400);
+	$(this).find(".txt h3").stop().css({'text-decoration':'none'});
+})
+
+		<!---------判断是手机页面还是pc页面------------>
+		//平台、设备和操作系统,  判断是否为手机打开网页
+        var system ={
+            win : false,
+            mac : false,
+            xll : false
+        };
+//检测平台
+        var p = navigator.platform;
+        system.win = p.indexOf("Win") == 0;
+        system.mac = p.indexOf("Mac") == 0;
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+//跳转语句，如果是手机访问就修改样式
+        if(system.win||system.mac||system.xll){
+
+            $("#i_fine").css("width","100%");
+            $("#i_teacher").css("width","100%");
+            $("#i_judge_pic").css("width","100%");
+            $(".i_link").css("width","100%");
+			$(".i_link2").css("width","100%");
+            $(" .bottomDiv").css("width","100%");
+
+        }else{
+
+            $("#i_fine").css("width","105%");
+            $("#i_teacher").css("width","105%");
+            $("#i_judge_pic").css("width","105%");
+            $(".i_link").css("width","105%");
+			$(".i_link2").css("width","100%");
+            $(" .bottomDiv").css("width","105%");
+        }
+
+
+
+
+</script>
+<!--这里是触摸时结束-->
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	var storage=window.localStorage;
+	var config=storage.getItem("token");
+	var phone=storage.getItem("username");
+	if(config!=""&& phone!=null){
+		$('.i_right_login a').html(phone+"|登出")
+		}
+	else{
+		$('.i_right_login a').html("注册/登录");
+		}
+
+
+});
+</script>
+
+<script type="text/javascript">
+$('.i_right_login a').click(function () {
+	 	var storage=window.localStorage;
+		var config=storage.getItem("token");
+		console.dir(config);
+	 	if(config!=null)
+		 {
+			$.post("http://api.xueshenx.com/common/logout",{"token": config},function(data)
+		 	{
+
+				switch (data.resultData.code) {
+					case 200:
+					   $('.i_right_login a').html("注册/登录");
+						localStorage.removeItem('token');
+						localStorage.removeItem('username');
+						window.location.href = 'login.html';
+						break;
+					case 201:
+					    alert("退出登录失败");
+						break;
+				}
+			});
+
+		 }
+	 else
+	 {
+	  //alert("你还未登录，请先登录");
+	  window.location.href = 'login.html';
+	}
+});
+</script>
+<script src="https://fast.wistia.com/embed/medias/2qdvdnj4gl.jsonp" async></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+<script type="text/javascript" src="js/dialog-classie.js"></script>
+<script type="text/javascript" src="js/dialogFx.js"></script>
+<script type="text/javascript">
+    (function() {
+
+        var dlgtrigger = document.querySelector( '[data-dialog]' ),
+            somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+            dlg = new DialogFx( somedialog );
+
+        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+    })();
+</script>
+
+<script>
+$('#i_right ul li').hover(
+
+	function(){
+		$(this).find('.i_wechat').css({'display':'block'})
+	},
+	function(){
+		$(this).find('.i_wechat').css({'display':'none'})
+	}
+
+)
+</script>
+<script>
+(function () {
+	 var _53code=document.createElement("script");
+	_53code.src = "//tb.53kf.com/code/code/10150930/1";
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(_53code, s);
+	})();
+
+</script>
+</body>
+</html>

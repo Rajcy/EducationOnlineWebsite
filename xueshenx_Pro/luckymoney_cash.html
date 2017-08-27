@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no">
+    <title>恭喜你，提现拉~！</title>
+    <script src="js/jquery.min.js"></script>
+
+    <!-- 基础对话框样式 -->
+    <link rel="stylesheet" type="text/css" href="css/dialog-normalize.css" />
+    <!-- 公共对话框样式 -->
+    <link rel="stylesheet" type="text/css" href="css/dialog.css" />
+    <!-- css3弹出动画样式 -->
+    <link rel="stylesheet" type="text/css" href="css/dialog-sandra.css" />
+    <script type="text/javascript" src="js/dialog-modernizr.custom.js"></script>
+
+    <link href="css/index.css@_v=2017040509" rel="stylesheet"/>
+    <!-- <script src="/fx/dist/js/zepto.min.js"></script> -->
+    <style>
+        /* 弹出框的样式*/
+        .dialog__content .dialog_discountcode{
+            display:none;
+            margin:0 auto 1.2em;
+            border:#969696 solid 1px;
+            width:150px;
+            height:24px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius:5px;}
+        a,.dialog__content button,.dialog__content .dialog_discountcode {
+            color: #74716D;
+            text-decoration: none;
+            outline: none;
+            text-align: center;
+        }
+
+        .dialog__content button {
+            padding: 1em 2em;
+            outline: none;
+            font-weight: 600;
+            border: none;
+            color: #fff;
+            background: #43A047;
+
+        }
+
+        .dialog__content .button-wrap {
+            padding: 2.5em 0 0;
+            font-size: 1.25em;
+        }
+
+        .dialog__content button.trigger {
+            background: #43A047;
+            color: #fff;
+            border: none;
+        }
+        /* 弹出框的样式结束*/
+
+    </style>
+</head>
+<body>
+<div class="tabbar tabbar_wrap page_wrap"  style="  background-image:url(images/cash_back.png);background-size: 100% 100%; background-repeat: no-repeat">
+    <div style="width:100%; height:450px; background-size: cover; background-repeat:no-repeat">
+        <div style="width:100%; height:20px; margin-top: 15%; background-size: cover; background-repeat:no-repeat"><p style="font-family: '微软雅黑'; font-weight:bold; color:#fefcfe;text-align:center; font-size:80px;">20.00￥</p></div>
+        <div class="red_cash" style="width:80%; height:150px;  margin:12% auto 30px auto;background-image:url(images/cash_balance.png);background-size:contain;background-position:center; background-repeat:no-repeat; font-size:45px; color:#fff; text-align:center; line-height:180px; "></div>
+    </div>
+    <div class="red_packet" style="width:100%;  height:70px;  margin:12% auto 50px auto;background-image:url(images/cash_take.png);background-size:contain;background-position:center; background-repeat:no-repeat;"></div>
+    <div id="want_detail" style="width:50%; height:40px; margin:-4% auto;  background-image:url(images/cash_detail.png);background-size:contain;background-position:center; background-repeat:no-repeat"></div>
+    <div id="detail" style="display: none;width:100%;  height:20px;  margin:20px auto;"><p style="font-family: '微软雅黑'; font-weight:bold; color:#fefcfe;text-align:center; font-size:20px;">每邀请一个朋友在东方标准X官网<br/>注册成功，即可多得两元助学基金<br/>满38元即可提现。<br/><br/><span style="font-size: 10px">(助学金只可在东方标准X官网上使用)</span></p></div>
+</div>
+<div class="pop_center">
+    <div class="pop_main">直播尚未开始，请稍后再试！</div>
+</div>
+
+<!----------弹窗设置-------------->
+
+<button id="dialog_show" data-dialog="somedialog" class="trigger" style="display:none"></button>
+<div id="somedialog" class="dialog" style=" z-index: 3;">
+    <div class="dialog__overlay"></div>
+    <div class="dialog__content" >
+        <h2 id="dialog_details" style="text-align: center;"><strong ></strong></h2><div style="text-align: center;">
+        <input class="dialog_discountcode" type="text" maxlength="10"  placeholder="输入你的优惠码"/>
+        <div class="course_codeprompt" style="font-size:0.8em; line-height:30px; text-align:center;color:#FF8000;"></div>
+        <button class="action dialogbutton" id="login_sure" data-dialog-close>立即邀请</button></div>
+    </div>
+</div>
+<script src="js/swiper.3.1.7.min.js"></script>
+<script>
+    //   动画效果
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination', /*分页器焦点*/
+        effect: 'coverflow', /*动画过渡效果*/
+        paginationClickable: true, /*添加点击效果*/
+        centeredSlides: true, /*活动内容居中*/
+        autoplay: 5000, /*自动滑动时间*/
+        autoplayDisableOnInteraction: false, /*用户操作动画，3s后可以继续执行动画*/
+        preloadImages: false,
+        lazyLoading: true
+    });
+    //   分类为两个时的样式
+    var $gridNum = $('.grid_wrap .grid_item')
+    if ($gridNum.length == 2) {
+        $gridNum.first().css('border-right', '1px solid #f1f1f5')
+    }
+    //   精彩课程为奇数时图片平铺
+    $('.course_main').each(function () {
+        var $item = $(this).find(' .course_item');
+        var itemNum = $item.length % 2;
+        if (itemNum == 1 && $(this).hasClass('course_live')) {
+            var $firstitem = $item.first(), $img = $firstitem.find("img");
+            $firstitem.css('width', "100%");
+            var wd = $firstitem.width() || window.innerWidth - 20;
+            var boxh = Math.ceil(wd / 2);
+            $img.wrap("<div class='big-box' style='height:" + boxh + "px'></div>");
+        }
+        else if (itemNum == 1 && $(this).hasClass('course_other')) {
+            var $lastitem = $item.last(), $img = $lastitem.find("img");
+            $lastitem.css('width', "100%");
+            var wd = $lastitem.width() || window.innerWidth - 20;
+            var boxh = Math.ceil(wd / 2);
+            $img.wrap("<div class='big-box' style='height:" + boxh + "px'></div>");
+        }
+    });
+
+</script>
+
+<script>
+    $('.red_packet').click(function(){
+        if($('.red_cash').val()<38.00){
+            //alert("亲，凑够38元才能提现哦，快去邀请好友吧！");
+            $("#dialog_show").click();
+            $("#dialog_details").html("亲，凑够38元才能提现哦!<br>快去邀请好友吧!");
+            $(".dialog_discountcode").css({'display':'none'});
+            $("#login_sure").click(function  () {
+                //location.reload( true )
+                window.location.href = 'login.html';
+            })
+
+            $(".dialog__overlay").click(function () {
+                //window.location.href = 'course.html';
+                //location.reload( true )
+                window.location.href = 'login.html';
+            })
+        }
+        else{
+
+        }
+    });
+
+    $('#want_detail').click(function () {
+        $('#detail').slideToggle("fast");
+    })
+</script>
+
+
+<!-- 快捷导航 -->
+<!-- /快捷导航 -->
+<!--<script type="text/javascript">    var hm = document.createElement("script");-->
+<!--hm.src = "http://ubas.xsteach.com/?2aaacb1b41ebbfae8366cae424171f2e";-->
+<!--var s = document.getElementsByTagName("script")[0];-->
+<!--s.parentNode.insertBefore(hm, s);-->
+<!--</script>-->
+
+<!----弹窗-->
+<script type="text/javascript" src="js/dialog-classie.js"></script>
+<script type="text/javascript" src="js/dialogFx.js"></script>
+<script type="text/javascript">
+    (function() {
+
+        var dlgtrigger = document.querySelector( '[data-dialog]' ),
+            somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+            dlg = new DialogFx( somedialog );
+
+        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+    })();
+</script>
+
+<!--<script src="js/jweixin-1.0.0.js@_v=2017040509"></script>-->
+<!--<script src="js/weixin.js@_v=2017040509"></script>-->
+<script type="text/javascript" src="js/wifi.js@_v=2017040509"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?666eed3d1138aba8c53e5d28cf45cdff";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</body>
+</html>

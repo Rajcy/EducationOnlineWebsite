@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>极酷阳光V3.5播放器简单列表功能——演示</title>
+    <meta name="keywords" content="极酷阳光V3.5播放器简单列表功能(列表功能)演示"/>
+    <meta name="description" content="极酷阳光V3.5播放器简单列表功能"/>
+    <style type="text/css">
+        <!--
+        div {
+            line-height: 26px;
+            font-size: 14px;
+        }
+
+        body {
+            background: lightgreen;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        div, ul, li, ol, dl, dt, dd, form, img, p {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        /* myplayer */
+        div#myplayer {
+            width: 1464px;
+            margin: 0 auto;
+            border: 1px #cccccc solid;
+            clear: both;
+            background: white;
+            clear: both;
+            height: 655px;
+        }
+
+        div#CuPlayer {
+            width: 1024px;
+            float: left;
+            margin-left: 0px;
+            margin-top: 0px;
+            height: 1024px;
+        }
+
+        div.list {
+            width: 440px;
+            float:right;
+            /*margin-top: 10px;*/
+            /*height:850px;*/
+        }
+
+        div.list dl img {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin-top: -5px;
+        }
+
+        div.list dl strong {
+            display: block;
+            width: 190px;
+            float: left;
+            padding-left: 8px;
+        }
+
+        div.list dl span {
+            display: block;
+            width: 190px;
+            float: left;
+            padding-left: 8px;
+        }
+
+        div.list dl dt {
+            width: 300px;
+            float: left;
+        }
+
+        div.list dl dt a {
+            display: block;
+            line-height: 18px;
+            padding-top: 10px;
+            border-bottom: 1px white solid;
+            height: 100px;
+            /*padding-top: 10px;*/
+            color: #333;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: lighter;
+        }
+
+        div.list dl dt a:hover {
+            height: 100px;
+            text-decoration: none;
+            background: #ee2c22;
+        }
+
+        h1 {
+            border-bottom: 1px #cccccc solid;
+            line-height: 58px;
+        }
+
+        .video {
+            OVERFLOW: visible;
+            WIDTH: 100%;
+            POSITION: relative
+        }
+
+
+        .scrollbar::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+
+        .scrollbar::-webkit-scrollbar
+        {
+            width: 10px;
+            background-color: #F5F5F5;
+        }
+
+        .scrollbar::-webkit-scrollbar-thumb
+        {
+            background-color: #f82c44;
+
+            background-image: -webkit-gradient(linear, 0 0, 0 100%,
+            color-stop(.5, rgba(255, 255, 255, .2)),
+            color-stop(.5, transparent), to(transparent));
+        }
+
+        /*播放列表 字体*/
+        .font-list{
+            text-align: center;
+            vertical-align: middle;
+            height: 100px;
+            line-height: 100px;
+            font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", MingLiu, Verdana, Arial, Helvetica, sans-serif;
+            z-index: 88;
+
+        }
+
+        -->
+    </style>
+    <script type="text/javascript" language="javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/swfobject.js"></script>
+    <script type="text/javascript" src="js/action.js"></script>
+</head>
+<body>
+<!--<div class="close_light_bg" id="close_light_bg"></div>-->
+<!--<ul class="nav" style="clear:both; ">-->
+<!--<li class="on"><a href="listDemo1.html">右侧图片列表</a></li>-->
+<!--<li><a href="listDemo2.html">右侧文字列表</a></li>-->
+<!--<li><a href="listDemo3.html">底部图片列表</a></li>-->
+<!--<li><a href="listDemo4.html">底部集数列表</a></li>-->
+<!--</ul>-->
+<!--<div class="blank"></div>-->
+<!--myplayer/begin-->
+<div id="myplayer">
+    <!--极酷阳光V3.5免费版 代码开始-->
+    <div id="CuPlayer" class="video"><strong>提示：您的Flash Player版本过低，请<a href="http://www.cuplayer.com/CuPlayer/">点此进行播放器升级</a>！</strong>
+    </div>
+    <div class="list scrollbar" style="height:650px;width:300px;overflow-x:hidden;overflow-y:auto;">
+        <dl>
+            <dt><a href="#" onclick="changeStream(0);"><img src="pic/512.png"/><strong class="font-list">皮克斯动画</strong></di></a></dt>
+        </dl>
+        <dl>
+            <dt><a href="#" onclick="changeStream(1);"><img src="pic/pic02.jpg"/><strong class="font-list">吉利博瑞牙克石冰雪测试</strong></a></dt>
+        </dl>
+        <dl>
+            <dt><a href="#" onclick="changeStream(2);"><img src="pic/pic03.jpg"/><strong class="font-list">全新帝豪概念车隆重发布</strong></a></dt>
+        </dl>
+        <dl>
+            <dt><a href="#" onclick="changeStream(3);"><img src="pic/pic04.jpg"/><strong class="font-list">吉利集团宣传片</strong></a></dt>
+        </dl>
+        <dl>
+            <dt><a href="#" onclick="changeStream(4);"><img src="pic/pic05.jpg"/><strong class="font-list">吉利博瑞产品篇</strong></a></dt>
+        </dl>
+        <dl>
+            <dt><a href="#" onclick="changeStream(5);"><img src="pic/pic06.jpg"/><strong class="font-list">全新帝豪概念车隆重发布</strong></a></dt>
+        </dl>
+        <dl>
+            <dt><a href="#" onclick="changeStream(6);"><img src="pic/pic07.jpg"/><strong class="font-list">吉利博瑞牙克石冰雪测试</strong></a></dt>
+        </dl>
+    </div>
+
+    <script type=text/javascript>
+        <!--
+        //极酷阳光V3.5免费版：官方连播代码示例20160519//
+        var CuPlayerList = "http://olm3zb2gw.bkt.clouddn.com/homevideo/0421/COCOOfficialTrailer2DantesLunch2017.mp4|http://admin.geely.com/videoFile/cmbs.flv|http://admin.geely.com/videoFile/150420.1080P.flv|http://admin.geely.com/videoFile/geelyxingxiang.flv|http://admin.geely.com/videoFile/brcp.flv|http://admin.geely.com/videoFile/dgjz.flv|http://admin.geely.com/videoFile/cmbs.flv"
+        var sp = CuPlayerList.split("|")
+        var num = sp.length;
+        var video_index = 0;
+        function getNext(pars) {
+            if (video_index < num - 1) {
+                video_index++;
+                so.addVariable("JcScpVideoPath", sp[video_index]);
+                so.addVariable("JcScpAutoPlay", "yes"); //是否自动播放
+                so.write("CuPlayer");
+            }
+            else {
+                video_index = 0;
+                so.addVariable("CuPlayerFile", sp[video_index]);
+                so.write("CuPlayer");
+            }
+            $(".list dl dt a").css("background", "#ffffff").css("color", "#ffffff");
+            $(".list dl dt a").eq(video_index).css("background", "#f82c44").css("color", "white");
+            //$(".font-list").eq(video_index).css("background", "#f82c44").css("color", "white");
+
+            LeftScr(video_index);
+        }
+        function changeStream(CuPlayerFile) {
+            $(".list dl dt a").css("background", "#ffffff").css("color", "#333");
+            $(".list dl dt a:hover").css("background", "#f82c44").css("color", "white");
+            //$(".font-list").eq(video_index).css("background", "#f82c44").css("color", "white");
+            LeftScr(CuPlayerFile);
+            video_index = CuPlayerFile;
+            so.addVariable("JcScpVideoPath", sp[CuPlayerFile]);
+            so.addVariable("JcScpAutoPlay", "yes"); //是否自动播放
+            so.write("CuPlayer");
+            return false;
+        }
+        CuPlayerFile = sp[video_index];
+        $(".list dl dt a").css("background", "#ffffff").css("color", "#333");
+        $(".list dl dt a").eq(video_index).css("background", "#f82c44").css("color", "white");
+        //$(".font-list").eq(video_index).css("background", "#f82c44").css("color", "white");
+        var so = new SWFObject("player.swf", "ply", "1150", "650", "9", "#666666");
+
+        so.addParam("allowfullscreen", "true");
+        so.addParam("allowscriptaccess", "always");
+        so.addParam("wmode", "opaque");
+        so.addParam("quality", "high");
+        so.addParam("salign", "lt");
+        so.addVariable("JcScpFile", "colorSet.xml"); //* 必须存在/播放器配置文件地址
+        so.addVariable("JcScpVideoPath", CuPlayerFile);
+        so.addVariable("JcScpImg", "images/startpic.jpg");
+        so.addVariable("JcScpAutoPlay", "yes"); //是否自动播放
+        so.write("CuPlayer");
+
+        function LeftScr(m) {
+            var scrtop;
+            if (m > 1) {
+                scrtop = 55 * (m - 1);
+            } else {
+                scrtop = 0;
+            }
+            $(".list").animate({
+                scrollTop: scrtop
+            }, 130);
+        }
+        //-->
+    </script>
+    <!--极酷阳光V3.5免费版 代码结束-->
+</div>
+<!--myplayer/end-->
+
+</body>
+</html>
